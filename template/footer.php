@@ -1,8 +1,7 @@
 <footer class="footer">
-  <span class="material-symbols-sharp">
-    star
-  </span>
-  Footer
+  <div class="footer-container">
+    <?php require_once 'template/cat_menu.php'; ?>
+  </div>
 </footer>
 </div>
 

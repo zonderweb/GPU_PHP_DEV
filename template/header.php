@@ -14,5 +14,32 @@
 
   <div class="grid-container">
     <header class="header">
-      <span class="material-symbols-sharp">home</span>Header
+      <div class="logo">
+        <a href="/" class="logo-link">Gpu<span>.dev</span></a>
+      </div>
+
+      <div class="header-menu">
+        <ul class="menu-list dev-list">
+          <li class="menu-item">
+            <a href="/admin" class="menu-link">Admin</a>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu-link">Link 1</a>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu-link">Link 2</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="login-menu">
+        <ul class="login-list dev-list">
+          <li class="login-item">
+            <a href="/login" class="login-link">Вхід</a>
+          </li>
+          <li class="login-item">
+            <a href="/register" class="login-link reg-link">Регістрація</a>
+          </li>
+        </ul>
+      </div>
     </header>

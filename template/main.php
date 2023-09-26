@@ -8,7 +8,6 @@
   <div class="columns">
     <?php echo getMainData(); ?>
   </div>
-  <?php require_once 'template/cat_menu.php'; ?>
 </main>
 
 
