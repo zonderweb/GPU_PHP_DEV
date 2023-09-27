@@ -95,6 +95,12 @@ body {
   padding-right: 25px;
 }
 
+.title {
+  font-size: 2rem;
+  line-height: 3.37rem;
+  margin-bottom: 10px;
+}
+
 .main {
   grid-area: main;
   max-width: 1280px;
