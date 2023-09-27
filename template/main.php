@@ -4,7 +4,7 @@
 вывод материалов статей на главной -->
 
 <main class="main">
-  <?php echo '<h1 class="title">GPU DataBase</h1>'; ?>
+  <h1 class="title">GPU DataBase</h1>
   <div class="columns">
     <?php echo getMainData(); ?>
   </div>

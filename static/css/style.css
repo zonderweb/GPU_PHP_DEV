@@ -134,3 +134,38 @@ body {
   font-weight: 700;
   font-size: 10rem;
 }
+
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* GPU DB */
+
+.gpudb-img {
+  margin-bottom: 20px;
+  display: block;
+}
+
+.spec-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: start;
+  margin-bottom: 20px;
+}
+
+.spec-list li {
+  padding: 5px 10px;
+  border: 1px solid rgba(0, 0, 0, .1);
+  background-color: #f3f3f3;
+  color: #555;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-right: 10px;
+}
+
+.spec-list li span {
+  text-transform: lowercase;
+}

@@ -27,6 +27,15 @@ switch ($route) {
     $result = getCategoryArticle($cat['id']);
     require_once 'template/cat.php';
     break;
+    // CAT 2
+  case ($route[0] == 'gpudb' and $route[1]):
+    $gpudb = getGpuDb($route[1]);
+    // echo '<pre>';
+    // var_dump($gpudb);
+    // $result = getCategoryArticle($cat['id']);
+    require_once 'template/gpudb.php';
+    break;
+    // CAT 2 END
   case ($route[0] == 'register'):
     require_once 'template/register.php';
     break;

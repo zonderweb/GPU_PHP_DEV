@@ -79,6 +79,12 @@ function getCategory($url)
   // var_dump(select($query)[0]);
 }
 
+function getGpuDb($url)
+{
+  $query = "SELECT * FROM gpucategory WHERE url='" . $url . "'";
+  return select($query)[0];
+}
+
 function getCategoryArticle($cid)
 {
   $query = "SELECT * FROM info WHERE cid=" . $cid;

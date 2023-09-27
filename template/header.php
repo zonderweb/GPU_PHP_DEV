@@ -24,7 +24,7 @@
             <a href="/admin" class="menu-link">Admin</a>
           </li>
           <li class="menu-item">
-            <a href="#" class="menu-link">Link 1</a>
+            <a href="/gpudb/geforce-rtx-3070" class="menu-link">GPU DB</a>
           </li>
           <li class="menu-item">
             <a href="#" class="menu-link">Link 2</a>
