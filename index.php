@@ -23,19 +23,15 @@ switch ($route) {
     require_once 'template/article.php';
     break;
   case ($route[0] == 'cat' and isset($route[1])):
-    $cat = getCategory($route[1]);
+    $cat = getCategory($route[1], 'category');
     $result = getCategoryArticle($cat['id']);
     require_once 'template/cat.php';
     break;
     // CAT 2
   case ($route[0] == 'gpudb' and $route[1]):
-    $gpudb = getGpuDb($route[1]);
-    // echo '<pre>';
-    // var_dump($gpudb);
-    // $result = getCategoryArticle($cat['id']);
+    $gpudb = getCategory($route[1], 'gpucategory');
     require_once 'template/gpudb.php';
-    break;
-    // CAT 2 END
+    break; // CAT 2 END
   case ($route[0] == 'register'):
     require_once 'template/register.php';
     break;

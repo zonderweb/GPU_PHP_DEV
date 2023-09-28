@@ -71,18 +71,11 @@ function getArticle($url)
   else header('Location: /404.php');
 }
 
-function getCategory($url)
+function getCategory($url, $table)
 {
-  $query = "SELECT * FROM category WHERE url='" . $url . "'";
+  $query = "SELECT * FROM " . $table . " WHERE url='" . $url . "'";
   if (isset(select($query)[0])) return select($query)[0];
   else header('Location: /404.php');
-  // var_dump(select($query)[0]);
-}
-
-function getGpuDb($url)
-{
-  $query = "SELECT * FROM gpucategory WHERE url='" . $url . "'";
-  return select($query)[0];
 }
 
 function getCategoryArticle($cid)
