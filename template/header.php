@@ -27,7 +27,7 @@
             <a href="/gpudb/geforce-rtx-3070" class="menu-link">GPU DB</a>
           </li>
           <li class="menu-item">
-            <a href="#" class="menu-link">Link 2</a>
+            <a href="/gpudb/radeon-rx-6600" class="menu-link">RAD</a>
           </li>
         </ul>
       </div>

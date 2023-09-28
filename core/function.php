@@ -64,9 +64,9 @@ function explodeURL($url)
   return explode('/', $url ?? '');
 }
 
-function getArticle($url)
+function getArticle($url, $table)
 {
-  $query = "SELECT * FROM info WHERE url='" . $url . "'";
+  $query = "SELECT * FROM " . $table . " WHERE url='" . $url . "'";
   if (isset(select($query)[0])) return select($query)[0];
   else header('Location: /404.php');
 }
@@ -82,7 +82,7 @@ function getCategoryArticle($cid, $table)
 {
   $query = "SELECT * FROM " . $table . " WHERE cid=" . $cid;
   if (select($query) != NULL) return select($query);
-  else header('Location: /404.php');
+  // else header('Location: /404.php');
 }
 
 function isLoginExist($login)

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Сен 26 2023 г., 21:10
+-- Время создания: Сен 28 2023 г., 23:10
 -- Версия сервера: 8.0.30
 -- Версия PHP: 8.1.9
 
@@ -42,6 +42,67 @@ INSERT INTO `category` (`id`, `url`, `title`, `description`) VALUES
 (1, 'nvidia', 'Nvidia', 'Відеоадаптери з GPU NVIDIA'),
 (2, 'amd', 'AMD', 'Відеоадаптери з GPU AMD'),
 (3, 'intel', 'Intel', 'Відеоадаптери з GPU INTEL');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `gpuarticle`
+--
+
+CREATE TABLE `gpuarticle` (
+  `id` int NOT NULL,
+  `cid` int NOT NULL,
+  `vendor` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `url` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `description` text COLLATE utf8mb4_general_ci,
+  `g-proc` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `cores` int NOT NULL,
+  `tmus` int NOT NULL,
+  `rops` int NOT NULL,
+  `m-size` int NOT NULL,
+  `m-type` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `bus-w` int NOT NULL,
+  `img` varchar(500) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `part-num` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Дамп данных таблицы `gpuarticle`
+--
+
+INSERT INTO `gpuarticle` (`id`, `cid`, `vendor`, `url`, `title`, `description`, `g-proc`, `cores`, `tmus`, `rops`, `m-size`, `m-type`, `bus-w`, `img`, `part-num`) VALUES
+(1, 1, 'zotac', 'zotac-rtx-3070-amp-holo', 'ZOTAC RTX 3070 AMP Holo', '<p>Get Amplified with the ZOTAC GAMING GeForce RTX™ 30 Series based on the NVIDIA Ampere architecture. Built with enhanced RT Cores and Tensor Cores, new streaming multiprocessors, and high-speed GDDR6 memory, the ZOTAC GAMING GeForce RTX 3070 AMP Holo LHR gives rise to amplified gaming with high fidelity in style.</p>', 'GA104', 5888, 184, 96, 8, 'GDDR6', 256, 'zotac3070-holo.jpg', 'ZT-A30700F-10P');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `gpucategory`
+--
+
+CREATE TABLE `gpucategory` (
+  `id` int NOT NULL,
+  `found` varchar(64) COLLATE utf8mb4_general_ci NOT NULL,
+  `url` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `g-proc` varchar(64) COLLATE utf8mb4_general_ci NOT NULL,
+  `cores` int NOT NULL,
+  `tmus` int NOT NULL,
+  `rops` int NOT NULL,
+  `msize` int NOT NULL,
+  `mtype` varchar(64) COLLATE utf8mb4_general_ci NOT NULL,
+  `busw` int NOT NULL,
+  `description` text COLLATE utf8mb4_general_ci,
+  `img` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Дамп данных таблицы `gpucategory`
+--
+
+INSERT INTO `gpucategory` (`id`, `found`, `url`, `title`, `g-proc`, `cores`, `tmus`, `rops`, `msize`, `mtype`, `busw`, `description`, `img`) VALUES
+(1, 'nvidia', 'geforce-rtx-3070', 'NVIDIA GeForce RTX 3070', 'GA104', 5888, 184, 96, 8, 'GDDR6', 256, '<p>The GeForce RTX 3070 is a high-end graphics card by NVIDIA, launched on September 1st, 2020. Built on the 8 nm process, and based on the GA104 graphics processor, in its GA104-300-A1 variant, the card supports DirectX 12 Ultimate. This ensures that all modern games will run on GeForce RTX 3070. Additionally, the DirectX 12 Ultimate capability guarantees support for hardware-raytracing, variable-rate shading and more, in upcoming video games. The GA104 graphics processor is a large chip with a die area of 392 mm² and 17,400 million transistors. Unlike the fully unlocked GeForce RTX 3070 Ti, which uses the same GPU but has all 6144 shaders enabled, NVIDIA has disabled some shading units on the GeForce RTX 3070 to reach the product\'s target shader count. It features 5888 shading units, 184 texture mapping units, and 96 ROPs. Also included are 184 tensor cores which help improve the speed of machine learning applications. The card also has 46 raytracing acceleration cores. NVIDIA has paired 8 GB GDDR6 memory with the GeForce RTX 3070, which are connected using a 256-bit memory interface. The GPU is operating at a frequency of 1500 MHz, which can be boosted up to 1725 MHz, memory is running at 1750 MHz (14 Gbps effective).</p>', '3070-front.jpg'),
+(2, 'amd', 'radeon-rx-6600', 'AMD Radeon RX 6600', 'Navi 23', 1792, 112, 64, 8, 'GDDR6', 128, '<p>The Radeon RX 6600 is a performance-segment graphics card by AMD, launched on October 13th, 2021. Built on the 7 nm process, and based on the Navi 23 graphics processor, in its Navi 23 XL variant, the card supports DirectX 12 Ultimate. This ensures that all modern games will run on Radeon RX 6600. Additionally, the DirectX 12 Ultimate capability guarantees support for hardware-raytracing, variable-rate shading and more, in upcoming video games. The Navi 23 graphics processor is an average sized chip with a die area of 237 mm² and 11,060 million transistors. Unlike the fully unlocked Radeon RX 6600 XT, which uses the same GPU but has all 2048 shaders enabled, AMD has disabled some shading units on the Radeon RX 6600 to reach the product\'s target shader count. It features 1792 shading units, 112 texture mapping units, and 64 ROPs. The card also has 28 raytracing acceleration cores. AMD has paired 8 GB GDDR6 memory with the Radeon RX 6600, which are connected using a 128-bit memory interface. The GPU is operating at a frequency of 1626 MHz, which can be boosted up to 2491 MHz, memory is running at 1750 MHz (14 Gbps effective).</p>\n<p>Being a dual-slot card, the AMD Radeon RX 6600 draws power from 1x 8-pin power connector, with power draw rated at 132 W maximum. Display outputs include: 1x HDMI 2.1, 3x DisplayPort 1.4a. Radeon RX 6600 is connected to the rest of the system using a PCI-Express 4.0 x8 interface. The card\'s dimensions are 190 mm x 110 mm x 40 mm, and it features a dual-slot cooling solution. Its price at launch was 329 US Dollars.</p>', 'rx6600-front.jpg');
 
 -- --------------------------------------------------------
 
@@ -104,6 +165,18 @@ ALTER TABLE `category`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `gpuarticle`
+--
+ALTER TABLE `gpuarticle`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `gpucategory`
+--
+ALTER TABLE `gpucategory`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `info`
 --
 ALTER TABLE `info`
@@ -124,6 +197,18 @@ ALTER TABLE `users`
 --
 ALTER TABLE `category`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT для таблицы `gpuarticle`
+--
+ALTER TABLE `gpuarticle`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT для таблицы `gpucategory`
+--
+ALTER TABLE `gpucategory`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT для таблицы `info`

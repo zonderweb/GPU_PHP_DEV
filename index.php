@@ -19,8 +19,12 @@ switch ($route) {
     require_once 'template/main.php';
     break;
   case ($route[0] == 'article' and isset($route[1])):
-    $result = getArticle($route[1]);
+    $result = getArticle($route[1], 'info');
     require_once 'template/article.php';
+    break;
+  case ($route[0] == 'vendor' and isset($route[1])):
+    $result = getArticle($route[1], 'gpuarticle');
+    require_once 'template/gpu-article.php';
     break;
   case ($route[0] == 'cat' and isset($route[1])):
     $cat = getCategory($route[1], 'category');

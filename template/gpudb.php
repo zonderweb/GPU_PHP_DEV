@@ -22,9 +22,9 @@
   $out .= '<p>' . $gpudb['description'] . '</p>';
 
   echo $out;
+
+  if (isset($result)) require_once 'template/_vendor.php';
   ?>
 </main>
-
-
 
 <?php require_once 'template/footer.php'; ?>
