@@ -78,12 +78,11 @@ function getCategory($url, $table)
   else header('Location: /404.php');
 }
 
-function getCategoryArticle($cid)
+function getCategoryArticle($cid, $table)
 {
-  $query = "SELECT * FROM info WHERE cid=" . $cid;
+  $query = "SELECT * FROM " . $table . " WHERE cid=" . $cid;
   if (select($query) != NULL) return select($query);
   else header('Location: /404.php');
-  // return select($query);
 }
 
 function isLoginExist($login)
