@@ -186,14 +186,13 @@ function logout()
   exit;
 }
 
-function catMenu($classList)
+function catMenu($classList, $subUrl, $tableName, $url, $title)
 {
-  $query = "SELECT * FROM category";
+  $query = "SELECT * FROM $tableName";
   $result = select($query);
-  // var_dump(select($query));
   $out = '';
   for ($i = 0; $i < count($result); $i++) {
-    $out .= '<li><a href="/cat/' . $result[$i]['url'] . '">' . $result[$i]['title'] . '</a></li>';
+    $out .= '<li><a href="/' . $subUrl . '/' . $result[$i][$url] . '">' . $result[$i][$title] . '</a></li>';
   }
-  echo "<ul class=" . $classList . ">$out</ul>";
+  return "<ul class=" . $classList . ">$out</ul>";
 }
