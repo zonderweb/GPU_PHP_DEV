@@ -6,11 +6,13 @@
   --logo-color: #9db504;
   --logo-span-color: #232323;
   --main-color: #2f2e41;
+  --main-color-ligth: #f0f0f4;
   --green-color: #aec804;
   --grey-color: #a4bbc5;
   --link-color: #7598a7;
   --ligth-grey: #f8f8f8;
   --table-hover-color: #eaeaea;
+  --main-font: 'Inter', sans-serif;
 }
 
 * {
@@ -19,10 +21,14 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Inter', sans-serif;
+html {
+  font-family: var(--main-font);
   font-size: 16px;
   line-height: 26px;
+}
+
+body {
+
   color: var(--main-color);
 }
 
@@ -290,4 +296,69 @@ body {
 .vendor-table .th-img {
   text-align: center;
   padding-top: 12px;
+}
+
+.main-flex {
+  display: flex;
+  align-items: center;
+}
+
+.register-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px 40px 10px 40px;
+  outline: 1px solid rgba(0, 0, 0, .1);
+  border-radius: 15px;
+  background: var(--main-color-ligth);
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.reg-inpt {
+  width: 330px;
+  color: var(--main-color);
+  border: 1px solid rgba(0, 0, 0, .2);
+  margin-bottom: 20px;
+}
+
+.reg-inpt,
+.reg-btn {
+  padding: 5px 10px;
+  font-weight: 600;
+  font-family: var(--main-font);
+  outline: none;
+  font-size: 1rem;
+  line-height: 1.6rem;
+  border-radius: 5px;
+}
+
+.reg-btn {
+  color: var(--ligth-grey);
+  background: var(--main-color);
+  border: 1px solid var(--main-color);
+  cursor: pointer;
+  margin: 10px 0 20px 0;
+}
+
+.reg-btn span {
+  line-height: 1.6rem;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.reg-btn:hover {
+  opacity: .8;
+}
+
+.link-form-login {
+  color: var(--logo-color);
+}
+
+.error-section {
+  color: var(--red-color);
+  font-size: 0.9rem;
 }
