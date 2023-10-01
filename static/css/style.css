@@ -362,3 +362,7 @@ body {
   color: var(--red-color);
   font-size: 0.9rem;
 }
+
+.ip-check {
+  margin-right: 5px;
+}
