@@ -20,38 +20,40 @@ ADMIN PAGE TEMPLATE
     }
     ?>
     <div class="admin-area">
-        <div class="left-dashboard">
-            <div class="logo">
-                <a href="/" target="_blank" class="logo-link">GPU<span>.dataBase</span></a>
-            </div>
-            <div class="left-menu">
-                <h3 class="left-dash-title">Матеріали</h3>
-                <span class="left-dash-subtitle">Блогова частина</span>
-                <ul class="m-left-list">
-                    <li class="m-left-item">
-                        <a href="/admin/create"><span class="material-symbols-outlined">add_box</span>Створити матеріал</a>
-                    </li>
-                </ul>
-            </div>
+        <div class="left-area">
+            <div class="left-dashboard">
+                <div class="logo">
+                    <a href="/" target="_blank" class="logo-link">GPU<span>.dataBase</span></a>
+                </div>
+                <div class="left-menu">
+                    <h3 class="left-dash-title">Матеріали</h3>
+                    <span class="left-dash-subtitle">Блогова частина</span>
+                    <ul class="m-left-list">
+                        <li class="m-left-item">
+                            <a href="/admin/create"><span class="material-symbols-outlined">add_box</span>Створити матеріал</a>
+                        </li>
+                    </ul>
+                </div>
 
-            <div class="left-menu">
-                <h3 class="left-dash-title">Матеріали Бази Відеокарт</h3>
-                <span class="left-dash-subtitle">База данних</span>
-                <ul class="m-left-list">
-                    <li class="m-left-item">
-                        <a href="/admin/create"><span class="material-symbols-outlined">add_box</span>Створити матеріал</a>
-                    </li>
-                </ul>
-            </div>
+                <div class="left-menu">
+                    <h3 class="left-dash-title">Матеріали Бази Відеокарт</h3>
+                    <span class="left-dash-subtitle">База данних</span>
+                    <ul class="m-left-list">
+                        <li class="m-left-item">
+                            <a href="/admin/create"><span class="material-symbols-outlined">add_box</span>Створити матеріал</a>
+                        </li>
+                    </ul>
+                </div>
 
-            <div class="left-menu">
-                <h3 class="left-dash-title">Статистика</h3>
-                <span class="left-dash-subtitle">Статистичні данні по БД</span>
-                <ul class="m-left-list">
-                    <li class="m-left-item">
-                        <a href="#"><span class="material-symbols-outlined">monitoring</span>Загальний звіт</a>
-                    </li>
-                </ul>
+                <div class="left-menu">
+                    <h3 class="left-dash-title">Статистика</h3>
+                    <span class="left-dash-subtitle">Статистичні данні по БД</span>
+                    <ul class="m-left-list">
+                        <li class="m-left-item">
+                            <a href="#"><span class="material-symbols-outlined">monitoring</span>Загальний звіт</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
         <header class="admin-header">
@@ -68,7 +70,9 @@ ADMIN PAGE TEMPLATE
         </header>
         <main class="admin-main">
             <div class="main-container">
-                <?php echo articleAdmin(); ?>
+                <div class="admin-article-wrapper">
+                    <?php echo articleAdmin(); ?>
+                </div>
             </div>
         </main>
     </div>

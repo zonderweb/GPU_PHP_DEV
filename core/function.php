@@ -49,11 +49,18 @@ function articleAdmin()
   global $result;
   $out = '';
   for ($i = 0; $i < count($result); $i++) {
-    $out .= '<div class="row">';
-    $out .= '<p>' . $result[$i]['title'] . '</p>';
-    $out .= '<img class="img-title" src="/static/images/' . $result[$i]['image'] . '" width=85>';
-    $out .= '<div><a href="/admin/delete/' . $result[$i]['id'] . '" onclick="return confirm(\'Точно видалити?\')">Видалити</a></div>';
-    $out .= '<div><a href="/admin/update/' . $result[$i]['id'] . '" onclick="return confirm(\'Точно оновити?\')">Оновити</a></div>';
+    $out .= '<div class="admin-article-item">';
+    $out .= '<div class="a-img-area">';
+    $out .= '<img class="img-admin-article" src="/static/images/' . $result[$i]['image'] . '">';
+    $out .= '</div>';
+    $out .= '<div class="a-title-area">';
+    $out .= '<h3 class="admin-article-title">' . $result[$i]['title'] . '</h3>';
+    $out .= '<span class="admin-article-subtitle">' . $result[$i]['descr_min'] . '</span>';
+    $out .= '</div>';
+    $out .= '<div class="a-link-area">';
+    $out .= '<a class="article-del" title="Видалити матеріал" href="/admin/delete/' . $result[$i]['id'] . '" onclick="return confirm(\'Точно видалити?\')"><span class="material-symbols-outlined">delete_forever</span></a>';
+    $out .= '<a class="article-edit" title="Редагувати матеріал" href="/admin/update/' . $result[$i]['id'] . '" onclick="return confirm(\'Точно оновити?\')">Редагувати <span class="material-symbols-outlined">edit_square</span></a>';
+    $out .= '</div>';
     $out .= '</div>';
   }
   return $out;

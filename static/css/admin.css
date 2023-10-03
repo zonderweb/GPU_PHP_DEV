@@ -11,6 +11,9 @@
   --blue-color: #1565c0;
   --title-dash-color: #7983e9;
   --sub-title-color: #797e88;
+  --red-color: #ef4444;
+  --sub-red-color: #eb1515;
+  --btn-blue-color: #3b82f6;
 }
 
 *,
@@ -49,11 +52,21 @@ body {
   margin-bottom: 40px;
 }
 
-.left-dashboard {
+.left-area {
   grid-area: left-d;
+}
+
+.left-dashboard {
   background: var(--sidebar-color);
   color: var(--white-color);
-  padding: 25px 25px;
+  padding: 1.5rem 1.56rem;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 280px;
 }
 
 .logo {
@@ -176,4 +189,77 @@ body {
 
 .logout span {
   vertical-align: middle;
+}
+
+.admin-article-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--white-color);
+  margin-bottom: 1.56rem;
+  /* padding: 1.56rem; */
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px -1px rgba(0, 0, 0, .1);
+}
+
+.a-img-area,
+.a-title-area,
+.a-link-area {
+  padding: 1.56rem;
+}
+
+.a-img-area {
+  border-right: 1px solid var(--border-color);
+}
+
+.img-admin-article {
+  width: 300px;
+  height: auto;
+}
+
+.admin-article-title {
+  color: var(--title-color);
+  font-size: 1rem;
+  line-height: 1.62rem;
+}
+
+.admin-article-subtitle {
+  font-size: .875rem;
+  line-height: 1.25rem;
+}
+
+.a-link-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.article-del {
+  color: var(--white-color);
+  background: var(--red-color);
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.article-del span {
+  margin: 7px;
+}
+
+.article-edit {
+  color: var(--white-color);
+  background: var(--blue-color);
+  padding: 5px;
+}
+
+.article-edit span {
+
+  vertical-align: center;
+}
+
+.article-edit {
+  padding: 6px 15px;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  border-radius: 5px;
 }
