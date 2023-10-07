@@ -18,6 +18,8 @@ ADMIN PAGE TEMPLATE
     if (!getUser()) {
         header("Location: /login");
     }
+    if ($route[1] == '') $title = 'Головна сторінка';
+    if ($route[1] == 'blog-part') $title = 'Блогова Частина';
     ?>
     <div class="admin-area">
         <div class="left-area">
@@ -25,12 +27,13 @@ ADMIN PAGE TEMPLATE
                 <div class="logo">
                     <a href="/" target="_blank" class="logo-link">GPU<span>.dataBase</span></a>
                 </div>
+
                 <div class="left-menu">
-                    <h3 class="left-dash-title">Матеріали</h3>
-                    <span class="left-dash-subtitle">Блогова частина</span>
+                    <h3 class="left-dash-title"><a href="/admin">Головна</a></h3>
+                    <span class="left-dash-subtitle">Адмін панель</span>
                     <ul class="m-left-list">
                         <li class="m-left-item">
-                            <a href="/admin/create"><span class="material-symbols-outlined">add_box</span>Створити матеріал</a>
+                            <a href="/admin"><span class="material-symbols-outlined">home</span>Загальний звіт</a>
                         </li>
                     </ul>
                 </div>
@@ -46,11 +49,11 @@ ADMIN PAGE TEMPLATE
                 </div>
 
                 <div class="left-menu">
-                    <h3 class="left-dash-title">Статистика</h3>
-                    <span class="left-dash-subtitle">Статистичні данні по БД</span>
+                    <h3 class="left-dash-title"><a href="/admin/blog-part">Блог</a></h3>
+                    <span class="left-dash-subtitle">Огляди та статті</span>
                     <ul class="m-left-list">
                         <li class="m-left-item">
-                            <a href="#"><span class="material-symbols-outlined">monitoring</span>Загальний звіт</a>
+                            <a href="/admin/create"><span class="material-symbols-outlined">add_box</span>Створити матеріал</a>
                         </li>
                     </ul>
                 </div>
@@ -63,16 +66,29 @@ ADMIN PAGE TEMPLATE
             </div>
             <div class="header-bottom">
                 <div class="header-container">
-                    header-bottom
+                    <h2><?php echo $title; ?></h2>
                 </div>
             </div>
 
         </header>
         <main class="admin-main">
             <div class="main-container">
-                <div class="admin-article-wrapper">
-                    <?php echo articleAdmin(); ?>
-                </div>
+
+                <?php
+                switch ($route) {
+                    case ($route[1] == ''):
+                        $title = 'index-title';
+                        require_once 'template/include/_admin-index.php';
+                        break;
+                    case ($route[1] == 'blog-part'):
+                        $title = 'blog-title';
+                        require_once 'template/include/_admin-blog.php';
+                        break;
+                    default:
+                        require_once 'template/include/_admin404.php';
+                }
+                ?>
+
             </div>
         </main>
     </div>

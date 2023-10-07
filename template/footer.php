@@ -2,7 +2,7 @@
   <div class="footer-container">
     <div class="footer-section">
       <h3>Founders</h3>
-      <?php require_once 'template/_cat_menu.php'; ?>
+      <?php require_once 'template/include/_cat_menu.php'; ?>
     </div>
     <div class="footer-section">
       <h3>База данних GPU</h3>

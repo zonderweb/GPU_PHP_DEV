@@ -6,7 +6,7 @@
 <main class="main">
   <h1 class="title">GPU DataBase</h1>
   <div class="menu-box-category">
-    <?php require 'template/_founders-menu.php' ?>
+    <?php require 'template/include/_founders-menu.php' ?>
   </div>
   <div class="columns">
     <?php echo getMainData(); ?>

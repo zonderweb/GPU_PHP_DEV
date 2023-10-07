@@ -1,0 +1,18 @@
+:root {
+  --sidebar-color: #0f172a;
+  --main-area-color: #f1f5f9;
+  --white-color: #fff;
+  --title-color: #1e293b;
+  --main-color: #64748b;
+  --main-font: 'Inter', sans-serif;
+  --border-color: #e2e8f0;
+  --blue-color: #1565c0;
+  --title-dash-color: #7983e9;
+  --sub-title-color: #797e88;
+  --red-color: #ef4444;
+  --sub-red-color: #eb1515;
+  --btn-blue-color: #3b82f6;
+  --btn-fiolet-color: #524ae3;
+  --green-color: #166534;
+  --ligth-green-color: #f0fdf4;
+}
