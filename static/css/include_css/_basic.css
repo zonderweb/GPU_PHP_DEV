@@ -1,0 +1,15 @@
+.c-red {
+  color: var(--red-color);
+}
+
+.c-blue {
+  color: var(--blue-color);
+}
+
+.c-green {
+  color: var(--ligth-green-color);
+}
+
+.c-orange {
+  color: var(--orange-color);
+}

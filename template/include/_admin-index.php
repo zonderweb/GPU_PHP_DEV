@@ -2,7 +2,31 @@
   ADMIN INDEX TEMPLATE 
 -->
 <div class="admin-article-wrapper">
-  <?php
-  echo 'ADMIN INDEX';
-  ?>
+  <div class="statistic">
+    <div class="static-item">
+      <h3 class="title-staistic">
+        <a href="/admin/db-gpu">База Відеокарт</a>
+      </h3>
+      <div class="count-article c-red">
+        <?php echo count($resultGpu) ?>
+      </div>
+      <p class="info-statistic c-red">
+        Кількість матеріалів
+      </p>
+      <p class="info-sub">Completed: <span><?php echo count($resultGpu) ?></span></p>
+    </div>
+
+    <div class="static-item">
+      <h3 class="title-staistic">
+        <a href="/admin/blog-part">Блогова Частина</a>
+      </h3>
+      <div class="count-article">
+        <?php echo count($result) ?>
+      </div>
+      <p class="info-statistic">
+        Кількість матеріалів
+      </p>
+      <p class="info-sub">Completed: <span><?php echo count($result) ?></span></p>
+    </div>
+  </div>
 </div>

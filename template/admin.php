@@ -20,6 +20,7 @@ ADMIN PAGE TEMPLATE
     }
     if ($route[1] == '') $title = 'Головна сторінка';
     if ($route[1] == 'blog-part') $title = 'Блогова Частина';
+    if ($route[1] == 'db-gpu') $title = 'База Данних Вендорів Відеокарт';
     ?>
     <div class="admin-area">
         <div class="left-area">
@@ -39,7 +40,7 @@ ADMIN PAGE TEMPLATE
                 </div>
 
                 <div class="left-menu">
-                    <h3 class="left-dash-title">Матеріали Бази Відеокарт</h3>
+                    <h3 class="left-dash-title"><a href="/admin/db-gpu">Матеріали Бази Відеокарт</a></h3>
                     <span class="left-dash-subtitle">База данних</span>
                     <ul class="m-left-list">
                         <li class="m-left-item">
@@ -77,11 +78,12 @@ ADMIN PAGE TEMPLATE
                 <?php
                 switch ($route) {
                     case ($route[1] == ''):
-                        $title = 'index-title';
                         require_once 'template/include/_admin-index.php';
                         break;
+                    case ($route[1] == 'db-gpu'):
+                        require_once 'template/include/_admin-db-gpu.php';
+                        break;
                     case ($route[1] == 'blog-part'):
-                        $title = 'blog-title';
                         require_once 'template/include/_admin-blog.php';
                         break;
                     default:

@@ -70,7 +70,9 @@ switch ($route) {
     break;
   case ($route[0] == 'admin'):
     $query = 'SELECT * FROM info';
+    $queryGpu = 'SELECT * FROM gpuarticle';
     $result = select($query);
+    $resultGpu = select($queryGpu);
     require_once 'template/admin.php';
     break;
   case ($route[0] == 'logout'):
