@@ -9,14 +9,15 @@ if (isset($_POST['submit'])) {
   $url = trim($_POST['url']);
   $description = trim($_POST['description']);
   $cid = $_POST['cid'];
-  $vendor = $_POST['vendor'];
+  $vendor = trim($_POST['vendor']);
+  $gpuClock = $_POST['gpu-clock'];
 
 
   move_uploaded_file($_FILES['image']['tmp_name'], 'static/images/vendor/' . $_FILES['image']['name']);
   $image = $_FILES['image']['name'];
 
 
-  $create = createArticleGpu($title, $url, $description, $cid, $vendor, $image);
+  $create = createArticleGpu($title, $url, $description, $cid, $vendor, $gpuClock, $image);
   if ($create) {
     header('Location: /admin/db-gpu');
   } else {
@@ -34,6 +35,7 @@ if (isset($_POST['submit'])) {
       "description" => "",
       "cid" => "",
       "vendor" => "",
+      "gpuClock" => "",
       "img" => "",
     );
   }

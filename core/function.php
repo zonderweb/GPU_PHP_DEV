@@ -185,9 +185,9 @@ function createArticle($title, $url, $descr_min, $description, $cid, $image)
   return execQuery($query);
 }
 
-function createArticleGpu($title, $url, $description, $cid, $vendor, $image)
+function createArticleGpu($title, $url, $description, $cid, $vendor, $gpuClock, $image)
 {
-  $query = "INSERT INTO gpuarticle (title, url, description, cid, vendor, img) VALUES ('" . $title . "', '" . $url . "', '" . $description . "', " . $cid . ", '" . $vendor . "', '" . $image . "')";
+  $query = "INSERT INTO gpuarticle (title, url, description, cid, vendor, `gpu-clock`, img) VALUES ('" . $title . "', '" . $url . "', '" . $description . "', " . $cid . ", '" . $vendor . "', " . $gpuClock . ", '" . $image . "')";
   return execQuery($query);
 }
 

@@ -2,6 +2,7 @@
   <p>Title: <input type="text" name="title" value="<?php if (isset($result['title'])) echo $result['title']; ?>"></p>
   <p>URL: <input type="text" name="url" value="<?php if (isset($result['url'])) echo $result['url']; ?>"></p>
   <p>Vendor: <input type="text" name="vendor" value="<?php if (isset($result['vendor'])) echo $result['vendor']; ?>"></p>
+  <p>GPU Clock: <input type="number" name="gpu-clock" value="<?php if (isset($result['gpuClock'])) echo $result['gpuClock']; ?>"></p>
 
 
 
