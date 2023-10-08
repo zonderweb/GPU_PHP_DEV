@@ -11,13 +11,14 @@ if (isset($_POST['submit'])) {
   $cid = $_POST['cid'];
   $vendor = trim($_POST['vendor']);
   $gpuClock = $_POST['gpu-clock'];
+  $boostClock = $_POST['boost-clock'];
 
 
   move_uploaded_file($_FILES['image']['tmp_name'], 'static/images/vendor/' . $_FILES['image']['name']);
   $image = $_FILES['image']['name'];
 
 
-  $create = createArticleGpu($title, $url, $description, $cid, $vendor, $gpuClock, $image);
+  $create = createArticleGpu($title, $url, $description, $cid, $vendor, $gpuClock, $boostClock, $image);
   if ($create) {
     header('Location: /admin/db-gpu');
   } else {
@@ -36,11 +37,10 @@ if (isset($_POST['submit'])) {
       "cid" => "",
       "vendor" => "",
       "gpuClock" => "",
+      "boostClock" => "",
       "img" => "",
     );
   }
 }
-
-echo "<h1>Створити матеріал</h1>";
 
 require_once 'include/_gpu_form.php';

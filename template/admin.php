@@ -20,7 +20,8 @@ ADMIN PAGE TEMPLATE
     }
     if ($route[1] == '') $title = 'Головна сторінка';
     if ($route[1] == 'blog-part') $title = 'Блогова Частина';
-    if ($route[1] == 'db-gpu') $title = 'База Данних Вендорів Відеокарт';
+    if ($route[1] == 'db-gpu') $title = 'База Вендорів Відеокарт';
+    if ($route[1] == 'gpu-create') $title = 'Створити новий запис => "База Вендорів Відеокарт"';
     ?>
     <div class="admin-area">
         <div class="left-area">
@@ -85,6 +86,13 @@ ADMIN PAGE TEMPLATE
                         break;
                     case ($route[1] == 'blog-part'):
                         require_once 'template/include/_admin-blog.php';
+                        break;
+                    case ($route[0] == 'admin' and @$route[1] === 'gpu-create'):
+                        if (getUser()) {
+                            $query = "SELECT id, title FROM gpucategory";
+                            $category = select($query);
+                            require_once 'template/gpu-create.php';
+                        }
                         break;
                     default:
                         require_once 'template/include/_admin404.php';
