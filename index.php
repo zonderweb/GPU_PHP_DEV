@@ -34,7 +34,7 @@ switch ($route) {
     // CAT 2
   case ($route[0] == 'gpudb' and $route[1]):
     $gpudb = getCategory($route[1], 'gpucategory');
-    $result = getCategoryArticle($gpudb['id'], 'gpuarticle');
+    $result = getVendor($gpudb['id'], 'gpuarticle');
     require_once 'template/gpudb.php';
     break; // CAT 2 END
   case ($route[0] == 'register'):

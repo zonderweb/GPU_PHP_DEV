@@ -87,9 +87,14 @@ function getCategory($url, $table)
 
 function getCategoryArticle($cid, $table)
 {
-  $query = "SELECT * FROM " . $table . " WHERE cid=" . $cid;
+  $query = "SELECT * FROM " . $table . " WHERE cid='" . $cid . "'";
   if (select($query) != NULL) return select($query);
-  // else header('Location: /404.php');
+}
+
+function getVendor($cid, $table)
+{
+  $query = "SELECT * FROM " . $table . " WHERE cid='" . $cid . "' ORDER BY vendor";
+  if (select($query) != NULL) return select($query);
 }
 
 function isLoginExist($login)

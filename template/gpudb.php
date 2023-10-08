@@ -20,7 +20,7 @@
   $out .= '<div class="content-gpudb">' . $gpudb['description'] . '</div>';
   echo $out;
 
-  if (isset($result)) require_once 'template/_vendor.php';
+  if (isset($result)) require_once 'template/include/_vendor.php';
   ?>
 </main>
 

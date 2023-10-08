@@ -148,6 +148,16 @@ body {
   margin-bottom: 5px;
 }
 
+.count-article a span,
+.count-article a {
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  display: block;
+  text-decoration: none;
+}
+
 .info-statistic {
   margin-bottom: 30px;
 }
