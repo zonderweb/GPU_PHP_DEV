@@ -47,7 +47,7 @@ switch ($route) {
     if (getUser()) {
       $query = "DELETE FROM info WHERE id=" . $route[2];
       execQuery($query);
-      header("Location: /admin");
+      header("Location: /admin/blog-part");
       exit;
     }
     header("Location: /");
@@ -85,8 +85,8 @@ switch ($route) {
     }
     break;
   case ($route[0] == 'admin'):
-    $query = 'SELECT * FROM info';
-    $queryGpu = 'SELECT * FROM gpuarticle';
+    $query = 'SELECT * FROM info ORDER BY id DESC';
+    $queryGpu = 'SELECT * FROM gpuarticle ORDER BY id DESC';
     $result = select($query);
     $resultGpu = select($queryGpu);
     require_once 'template/admin.php';

@@ -15,7 +15,7 @@ if (isset($_POST['submit'])) {
     $image = $_FILES['image']['name'];
     $create = createArticle($title, $url, $descr_min, $description, $cid, $image);
     if ($create) {
-        header('Location: /admin');
+        header('Location: /admin/blog-part');
     } else {
         setcookie("alert", "create error", time() + 60 * 10);
     }
