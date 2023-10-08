@@ -180,6 +180,12 @@ function createArticle($title, $url, $descr_min, $description, $cid, $image)
   return execQuery($query);
 }
 
+function createArticleGpu($title, $url, $description, $cid, $image)
+{
+  $query = "INSERT INTO gpuarticle (title, url, description, cid, img) VALUES ('" . $title . "', '" . $url . "', '" . $description . "', " . $cid . ", '" . $image . "')";
+  return execQuery($query);
+}
+
 function updateArticle($id, $title, $url, $descr_min, $description, $cid, $image)
 {
   $query = "UPDATE info SET title = '" . $title . "', url = '" . $url . "', descr_min = '" . $descr_min . "', description = '" . $description . "', cid = " . $cid . ", image = '" . $image . "' WHERE id =" . $id;

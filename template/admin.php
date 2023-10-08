@@ -44,7 +44,7 @@ ADMIN PAGE TEMPLATE
                     <span class="left-dash-subtitle">База данних</span>
                     <ul class="m-left-list">
                         <li class="m-left-item">
-                            <a href="/admin/create"><span class="material-symbols-outlined">add_box</span>Створити матеріал</a>
+                            <a href="/admin/gpu-create"><span class="material-symbols-outlined">add_box</span>Створити матеріал</a>
                         </li>
                     </ul>
                 </div>

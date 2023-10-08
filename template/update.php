@@ -37,7 +37,6 @@ if (isset($_COOKIE['alert'])) {
 
 echo "<h1>Оновити матеріал</h1>";
 
-
 require_once '_form.php';
 
 echo "<a href='/admin'>На головну Admin</a>";
