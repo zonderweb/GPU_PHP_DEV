@@ -12,13 +12,14 @@ if (isset($_POST['submit'])) {
   $vendor = trim($_POST['vendor']);
   $gpuClock = $_POST['gpu-clock'];
   $boostClock = $_POST['boost-clock'];
+  $memoryClock = $_POST['memory-clock'];
 
 
   move_uploaded_file($_FILES['image']['tmp_name'], 'static/images/vendor/' . $_FILES['image']['name']);
   $image = $_FILES['image']['name'];
 
 
-  $create = createArticleGpu($title, $url, $description, $cid, $vendor, $gpuClock, $boostClock, $image);
+  $create = createArticleGpu($title, $url, $description, $cid, $vendor, $gpuClock, $boostClock, $memoryClock, $image);
   if ($create) {
     header('Location: /admin/db-gpu');
   } else {
@@ -38,9 +39,9 @@ if (isset($_POST['submit'])) {
       "vendor" => "",
       "gpuClock" => "",
       "boostClock" => "",
+      "memoryClock" => "",
       "img" => "",
     );
   }
 }
-
 require_once 'include/_gpu_form.php';

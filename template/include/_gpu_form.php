@@ -6,6 +6,7 @@
       <p>Vendor: <input type="text" name="vendor" value="<?php if (isset($result['vendor'])) echo $result['vendor']; ?>"></p>
       <p>GPU Clock: <input type="number" name="gpu-clock" value="<?php if (isset($result['gpuClock'])) echo $result['gpuClock']; ?>"></p>
       <p>Boost Clock: <input type="number" name="boost-clock" value="<?php if (isset($result['boostClock'])) echo $result['boostClock']; ?>"></p>
+      <p>Memory Clock: <input type="number" name="memory-clock" value="<?php if (isset($result['memoryClock'])) echo $result['memoryClock']; ?>"></p>
 
 
 
