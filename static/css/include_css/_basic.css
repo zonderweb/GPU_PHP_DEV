@@ -1,3 +1,23 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--main-font);
+  font-size: 16px;
+  line-height: 26px;
+}
+
+body {
+  height: 100%;
+  overflow-x: hidden;
+  color: var(--main-color);
+}
+
 .c-red {
   color: var(--red-color);
 }

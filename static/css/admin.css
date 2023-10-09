@@ -2,27 +2,7 @@
 @import url('/static/css/include_css/_var.css');
 @import url('/static/css/include_css/_basic.css');
 @import url('/static/css/include_css/_left-dashboard.css');
-
-
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-family: var(--main-font);
-  font-size: 16px;
-  line-height: 26px;
-}
-
-body {
-  height: 100%;
-  overflow-x: hidden;
-  color: var(--main-color);
-}
+@import url('/static/css/include_css/_form_create.css');
 
 .admin-area {
   display: grid;
@@ -33,8 +13,6 @@ body {
   grid-template-columns: 280px 1fr;
   grid-template-rows: auto 1fr;
 }
-
-
 
 /* ADMIN HEADER */
 
@@ -259,12 +237,4 @@ body {
 .article-edit span {
   font-size: 1.125rem;
   line-height: 1.625rem;
-}
-
-/* FORM */
-.form-area {
-  background: var(--white-color);
-  padding: 30px;
-  border-radius: 1rem;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px -1px rgba(0, 0, 0, .1);
 }

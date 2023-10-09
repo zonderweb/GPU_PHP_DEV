@@ -22,7 +22,7 @@
       $res .= '<td>' . $result[$i]['gpu-clock'] . ' ' . 'MHz' . '</td>';
       $res .= '<td>' . $result[$i]['boost-clock'] . ' ' . 'MHz' . '</td>';
       $res .= '<td>' . $result[$i]['memory-clock'] . ' ' . 'MHz' . '</td>';
-      $res .= '<td>' . $result[$i]['other-change'] . ' ' . 'MHz' . '</td>';
+      $res .= '<td>' . $result[$i]['other-change'] . '</td>';
       $res .= '</tr>';
     }
     echo $res;

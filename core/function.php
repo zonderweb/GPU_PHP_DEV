@@ -185,9 +185,9 @@ function createArticle($title, $url, $descr_min, $description, $cid, $image)
   return execQuery($query);
 }
 
-function createArticleGpu($title, $url, $description, $cid, $vendor, $gpuClock, $boostClock, $memoryClock, $image)
+function createArticleGpu($title, $url, $partNum,  $description, $cid, $vendor, $gpuClock, $boostClock, $memoryClock, $otherChange, $image)
 {
-  $query = "INSERT INTO gpuarticle (title, url, description, cid, vendor, `gpu-clock`, `boost-clock`, `memory-clock`, img) VALUES ('" . $title . "', '" . $url . "', '" . $description . "', " . $cid . ", '" . $vendor . "', " . $gpuClock . ", " . $boostClock . ", " .  $memoryClock . ", '" . $image . "')";
+  $query = "INSERT INTO gpuarticle (title, url, `part-num`, description, cid, vendor, `gpu-clock`, `boost-clock`, `memory-clock`, `other-change`, img) VALUES ('" . $title . "', '" . $url . "', '" . $partNum . "' , '" . $description . "', " . $cid . ", '" . $vendor . "', " . $gpuClock . ", " . $boostClock . ", " .  $memoryClock . ", '" . $otherChange . "', '" . $image . "')";
   return execQuery($query);
 }
 

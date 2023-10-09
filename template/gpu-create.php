@@ -7,19 +7,21 @@ $action = "Create";
 if (isset($_POST['submit'])) {
   $title = trim($_POST['title']);
   $url = trim($_POST['url']);
+  $partNum = trim($_POST['part-num']);
   $description = trim($_POST['description']);
   $cid = $_POST['cid'];
   $vendor = trim($_POST['vendor']);
   $gpuClock = $_POST['gpu-clock'];
   $boostClock = $_POST['boost-clock'];
   $memoryClock = $_POST['memory-clock'];
+  $otherChange = $_POST['other-change'];
 
 
   move_uploaded_file($_FILES['image']['tmp_name'], 'static/images/vendor/' . $_FILES['image']['name']);
   $image = $_FILES['image']['name'];
 
 
-  $create = createArticleGpu($title, $url, $description, $cid, $vendor, $gpuClock, $boostClock, $memoryClock, $image);
+  $create = createArticleGpu($title, $url, $partNum, $description, $cid, $vendor, $gpuClock, $boostClock, $memoryClock, $otherChange, $image);
   if ($create) {
     header('Location: /admin/db-gpu');
   } else {
@@ -34,12 +36,14 @@ if (isset($_POST['submit'])) {
     $result = array(
       "title" => "",
       "url" => "",
+      "partNum" => "",
       "description" => "",
       "cid" => "",
       "vendor" => "",
       "gpuClock" => "",
       "boostClock" => "",
       "memoryClock" => "",
+      "otherChange" => "",
       "img" => "",
     );
   }
