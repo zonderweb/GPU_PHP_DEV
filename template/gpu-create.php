@@ -2,7 +2,7 @@
 
 // CREATE ARTICLE GPU TEMPLATE
 
-$action = "Create";
+$action = "Створити";
 
 if (isset($_POST['submit'])) {
   $title = trim($_POST['title']);

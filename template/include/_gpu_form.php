@@ -40,7 +40,7 @@
         echo '<img src="/static/images/vendor/' . $result['img'] . '" style="width:300px">';
       }
       ?>
-      <div><input type="submit" name="submit" value="<?php echo $action; ?>"></div>
+      <div class="btn-create-gpu"><input type="submit" name="submit" value="<?php echo $action; ?>"></div>
     </form>
   </div>
 </div>
