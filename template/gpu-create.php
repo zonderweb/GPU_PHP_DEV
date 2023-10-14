@@ -1,5 +1,4 @@
 <?php
-
 // CREATE ARTICLE GPU TEMPLATE
 
 $action = "Створити";
@@ -16,6 +15,8 @@ if (isset($_POST['submit'])) {
   $memoryClock = $_POST['memory-clock'];
   $graphPrc = $_POST['graph-processor'];
   $cores = $_POST['cores'];
+  $tmus = $_POST['tmus'];
+  $rops = $_POST['rops'];
 
   $otherChange = $_POST['other-change'];
 
@@ -24,7 +25,7 @@ if (isset($_POST['submit'])) {
   $image = $_FILES['image']['name'];
 
 
-  $create = createArticleGpu($title, $url, $partNum, $description, $cid, $vendor, $gpuClock, $boostClock, $memoryClock, $graphPrc, $cores, $otherChange, $image);
+  $create = createArticleGpu($title, $url, $partNum, $description, $cid, $vendor, $gpuClock, $boostClock, $memoryClock, $graphPrc, $cores, $tmus, $rops, $otherChange, $image);
   if ($create) {
     header('Location: /admin/db-gpu');
   } else {
@@ -48,6 +49,8 @@ if (isset($_POST['submit'])) {
       "memoryClock" => "",
       "graphPrc" => "",
       "cores" => "",
+      "tmus" => "",
+      "rops" => "",
       "otherChange" => "",
       "img" => "",
     );

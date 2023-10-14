@@ -10,6 +10,8 @@
       <p>Memory Clock (MHz):<br> <input type="number" name="memory-clock" value="<?php if (isset($result['memoryClock'])) echo $result['memoryClock']; ?>"></p>
       <p>Graph Processor: <input type="text" name="graph-processor" value="<?php if (isset($result['graphPrc'])) echo $result['graphPrc']; ?>"></p>
       <p>Cores (q):<br> <input type="number" name="cores" value="<?php if (isset($result['cores'])) echo $result['cores']; ?>"></p>
+      <p>Tmus (q):<br> <input type="number" name="tmus" value="<?php if (isset($result['tmus'])) echo $result['tmus']; ?>"></p>
+      <p>Rops (q):<br> <input type="number" name="rops" value="<?php if (isset($result['rops'])) echo $result['rops']; ?>"></p>
 
 
       <p>Other Changes: <input type="text" name="other-change" value="<?php if (isset($result['otherChange'])) echo $result['otherChange']; ?>"></p>
