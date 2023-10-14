@@ -14,15 +14,10 @@
       <p>Rops (q):<br> <input type="number" name="rops" value="<?php if (isset($result['rops'])) echo $result['rops']; ?>"></p>
       <p>Memory Size (MB):<br> <input type="number" name="memory-size" value="<?php if (isset($result['memSize'])) echo $result['memSize']; ?>"></p>
       <p>Memory type: <input type="text" name="memory-type" value="<?php if (isset($result['memType'])) echo $result['memType']; ?>"></p>
-
-
+      <p>Bus Width (bit):<br> <input type="number" name="bus-width" value="<?php if (isset($result['busW'])) echo $result['busW']; ?>"></p>
       <p>Other Changes: <input type="text" name="other-change" value="<?php if (isset($result['otherChange'])) echo $result['otherChange']; ?>"></p>
-
-
-
       <p>Description: <textarea name="description"><?php if (isset($result['description'])) echo $result['description']; ?></textarea>
       </p>
-
 
       <p>Category:
         <select name="cid">

@@ -201,17 +201,14 @@ function createArticleGpu(
   $rops,
   $memSize,
   $memType,
+  $busW,
   $otherChange,
   $image
 ) {
-  $query = "INSERT INTO gpuarticle (title, url, `part-num`, description, cid, vendor, `gpu-clock`, `boost-clock`, `memory-clock`, `graph-processor`, cores, tmus, rops, `memory-size`, `memory-type`, `other-change`, img) VALUES ('" . $title . "', '" . $url . "', '" . $partNum . "' , '" . $description . "', " . $cid . ", '" . $vendor . "', " . $gpuClock . ", " . $boostClock . ", " .  $memoryClock . ", '" . $graphPrc . "', " . $cores . ", " . $tmus . ", " . $rops . ", " . $memSize . ", '" .  $memType . "', '" . $otherChange . "', '" . $image . "')";
+  $query = "INSERT INTO gpuarticle (title, url, `part-num`, description, cid, vendor, `gpu-clock`, `boost-clock`, `memory-clock`, `graph-processor`, cores, tmus, rops, `memory-size`, `memory-type`, `bus-width`, `other-change`, img) VALUES ('" . $title . "', '" . $url . "', '" . $partNum . "' , '" . $description . "', " . $cid . ", '" . $vendor . "', " . $gpuClock . ", " . $boostClock . ", " .  $memoryClock . ", '" . $graphPrc . "', " . $cores . ", " . $tmus . ", " . $rops . ", " . $memSize . ", '" .  $memType . "', " . $busW . ", '" . $otherChange . "', '" . $image . "')";
 
   return execQuery($query);
 }
-
-
-
-
 
 function updateArticle($id, $title, $url, $descr_min, $description, $cid, $image)
 {

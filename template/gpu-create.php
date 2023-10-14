@@ -19,14 +19,13 @@ if (isset($_POST['submit'])) {
   $rops = $_POST['rops'];
   $memSize = $_POST['memory-size'];
   $memType = trim($_POST['memory-type']);
-
+  $busW = trim($_POST['bus-width']);
   $otherChange = $_POST['other-change'];
-
 
   move_uploaded_file($_FILES['image']['tmp_name'], 'static/images/vendor/' . $_FILES['image']['name']);
   $image = $_FILES['image']['name'];
 
-  $create = createArticleGpu($title, $url, $partNum, $description, $cid, $vendor, $gpuClock, $boostClock, $memoryClock, $graphPrc, $cores, $tmus, $rops, $memSize, $memType, $otherChange, $image);
+  $create = createArticleGpu($title, $url, $partNum, $description, $cid, $vendor, $gpuClock, $boostClock, $memoryClock, $graphPrc, $cores, $tmus, $rops, $memSize, $memType, $busW, $otherChange, $image);
   if ($create) {
     header('Location: /admin/db-gpu');
   } else {
@@ -54,6 +53,7 @@ if (isset($_POST['submit'])) {
       "rops" => "",
       "memSize" => "",
       "memType" => "",
+      "busW" => "",
       "otherChange" => "",
       "img" => "",
     );
