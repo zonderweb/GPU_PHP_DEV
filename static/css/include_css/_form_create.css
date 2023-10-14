@@ -5,3 +5,59 @@
   border-radius: 1rem;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px -1px rgba(0, 0, 0, .1);
 }
+
+/* FORM CREATE */
+.form-container {
+  max-width: 80%;
+  margin: auto;
+}
+
+.form-container input[type="text"],
+.form-container input[type="number"],
+.form-container textarea,
+.form-container select,
+.form-container input[type="file"] {
+  margin-bottom: 20px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="number"],
+.form-container textarea {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-family: inherit;
+  color: rgba(0, 0, 0, .87);
+  border: 1px solid var(--border-color);
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+.form-container input[type="number"] {
+  width: 25%;
+  padding-left: 25px;
+}
+
+.form-container input[type="text"],
+.form-container textarea {
+  width: 100%;
+}
+
+.form-container textarea {
+  min-height: 300px;
+}
+
+.btn-create-gpu input {
+  background: var(--ligth-fio-color);
+  padding: 15px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border: none;
+  color: var(--fio-color);
+  font-weight: 600;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.btn-create-gpu input:hover {
+  opacity: .8;
+}
