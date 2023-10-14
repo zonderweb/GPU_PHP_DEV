@@ -1,0 +1,73 @@
+.header {
+  grid-area: header;
+  padding: 0 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  border-right: 1px solid rgba(0, 0, 0, .1);
+  padding-right: 40px;
+  margin-right: auto;
+}
+
+.logo-link {
+  font-size: 2.25rem;
+  line-height: 3.37rem;
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--logo-color);
+}
+
+.logo-link>span {
+  font-style: italic;
+  font-weight: 400;
+  line-height: 3.37rem;
+  font-size: 1.8rem;
+  color: var(--main-color);
+}
+
+.dev-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  line-height: 3.37rem;
+}
+
+.menu-item,
+.login-item,
+.menu-link,
+.login-link {
+  font-weight: 600;
+  color: var(--main-color);
+}
+
+.menu-link,
+.login-link {
+  text-decoration: none;
+  padding: 0 10px;
+  display: block;
+}
+
+.menu-link:hover,
+.login-link:hover {
+  color: var(--green-color);
+}
+
+.login-menu {
+  border-left: 1px solid rgba(0, 0, 0, .1);
+  padding-left: 25px;
+}
+
+.header-menu {
+  padding-right: 25px;
+}
+
+.title {
+  font-size: 2rem;
+  line-height: 3.37rem;
+  margin-bottom: 10px;
+}
