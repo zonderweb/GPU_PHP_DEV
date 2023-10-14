@@ -14,6 +14,8 @@ if (isset($_POST['submit'])) {
   $gpuClock = $_POST['gpu-clock'];
   $boostClock = $_POST['boost-clock'];
   $memoryClock = $_POST['memory-clock'];
+  $graphPrc = $_POST['graph-processor'];
+
   $otherChange = $_POST['other-change'];
 
 
@@ -21,7 +23,7 @@ if (isset($_POST['submit'])) {
   $image = $_FILES['image']['name'];
 
 
-  $create = createArticleGpu($title, $url, $partNum, $description, $cid, $vendor, $gpuClock, $boostClock, $memoryClock, $otherChange, $image);
+  $create = createArticleGpu($title, $url, $partNum, $description, $cid, $vendor, $gpuClock, $boostClock, $memoryClock, $graphPrc, $otherChange, $image);
   if ($create) {
     header('Location: /admin/db-gpu');
   } else {
@@ -43,6 +45,7 @@ if (isset($_POST['submit'])) {
       "gpuClock" => "",
       "boostClock" => "",
       "memoryClock" => "",
+      "graphPrc" => "",
       "otherChange" => "",
       "img" => "",
     );

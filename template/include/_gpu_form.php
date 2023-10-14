@@ -8,6 +8,9 @@
       <p>GPU Clock (MHz):<br> <input type="number" name="gpu-clock" value="<?php if (isset($result['gpuClock'])) echo $result['gpuClock']; ?>"></p>
       <p>Boost Clock (MHz):<br> <input type="number" name="boost-clock" value="<?php if (isset($result['boostClock'])) echo $result['boostClock']; ?>"></p>
       <p>Memory Clock (MHz):<br> <input type="number" name="memory-clock" value="<?php if (isset($result['memoryClock'])) echo $result['memoryClock']; ?>"></p>
+      <p>Graph Processor: <input type="text" name="graph-processor" value="<?php if (isset($result['graphPrc'])) echo $result['graphPrc']; ?>"></p>
+
+
       <p>Other Changes: <input type="text" name="other-change" value="<?php if (isset($result['otherChange'])) echo $result['otherChange']; ?>"></p>
 
 
