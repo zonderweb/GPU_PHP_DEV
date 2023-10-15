@@ -15,7 +15,7 @@
   <div class="grid-container">
     <header class="header">
       <div class="logo">
-        <a href="/" class="logo-link">GPU<span>.dataBase</span></a>
+        <a href="/" class="logo-link">dataBase<span>.</span></a>
       </div>
 
       <div class="header-menu">

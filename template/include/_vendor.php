@@ -1,6 +1,6 @@
 <div class="vendor">
   <h2 class="vendor-title"><span>Vendor</span> dataBase</h2>
-  <h3 class="vendor-subtitle">Інші плати на основі данного дизайну (<?php echo count($result) ?>)</h3>
+  <h3 class="vendor-subtitle">Плати вендорів на основі данного дизайну (<?php echo count($result) ?>)</h3>
   <table class="vendor-table">
     <tr>
       <th>Name</th>
