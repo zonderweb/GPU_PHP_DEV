@@ -59,13 +59,6 @@ switch ($route) {
       require_once 'template/create.php';
     }
     break;
-    // case ($route[0] == 'admin' and @$route[1] === 'gpu-create'):
-    //   if (getUser()) {
-    //     $query = "SELECT id, title FROM gpucategory";
-    //     $category = select($query);
-    //     require_once 'template/gpu-create.php';
-    //   }
-    //   break;
   case ($route[0] == 'admin' and @$route[1] === 'update' and isset($route[2])):
     if (getUser()) {
       $query = "SELECT id, title FROM category";
@@ -75,15 +68,15 @@ switch ($route) {
       require_once 'template/update.php';
     }
     break;
-  case ($route[0] == 'admin' and @$route[1] === 'gpu-update' and isset($route[2])):
-    if (getUser()) {
-      $query = "SELECT id, title FROM gpucategory";
-      $category = select($query);
-      $query = "SELECT * FROM gpuarticle WHERE id = " . $route[2];
-      $result = select($query)[0];
-      require_once 'template/gpu-update.php';
-    }
-    break;
+    // case ($route[0] == 'admin' and @$route[1] === 'gpu-update' and isset($route[2])):
+    //   if (getUser()) {
+    //     $query = "SELECT id, title FROM gpucategory";
+    //     $category = select($query);
+    //     $query = "SELECT * FROM gpuarticle WHERE id = " . $route[2];
+    //     $result = select($query)[0];
+    //     require_once 'template/gpu-update.php';
+    //   }
+    //   break;
   case ($route[0] == 'admin'):
     $query = 'SELECT * FROM info ORDER BY id DESC';
     $queryGpu = 'SELECT * FROM gpuarticle ORDER BY id DESC';

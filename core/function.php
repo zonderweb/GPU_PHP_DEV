@@ -210,9 +210,34 @@ function createArticleGpu(
   return execQuery($query);
 }
 
+function updateArticleGpu(
+  $id,
+  $title,
+  $url,
+  $partNum,
+  $description,
+  $cid,
+  $vendor,
+  $gpuClock,
+  $boostClock,
+  $memoryClock,
+  $graphPrc,
+  $cores,
+  $tmus,
+  $rops,
+  $memSize,
+  $memType,
+  $busW,
+  $otherChange,
+  $image
+) {
+  $query = "UPDATE gpuarticle SET title = '" . $title . "', url = '" . $url . "', `part-num` = '" . $partNum . "', description = '" . $description . "', cid = " . $cid . ", vendor = '" . $vendor . "', `gpu-clock` = " . $gpuClock . ", `boost-clock` = " . $boostClock . ", `memory-clock` = " .  $memoryClock . ", `graph-processor` = '" . $graphPrc . "', cores = " . $cores . ", tmus = " . $tmus . ", rops = " . $rops . ", `memory-size` = " . $memSize . ", `memory-type` = '" .  $memType . "', `bus-width` = " . $busW . ", `other-change` = '" . $otherChange . "', img = '" . $image . "' WHERE id = " . $id;
+  return execQuery($query);
+}
+
 function updateArticle($id, $title, $url, $descr_min, $description, $cid, $image)
 {
-  $query = "UPDATE info SET title = '" . $title . "', url = '" . $url . "', descr_min = '" . $descr_min . "', description = '" . $description . "', cid = " . $cid . ", image = '" . $image . "' WHERE id =" . $id;
+  $query = "UPDATE info SET title = '" . $title . "', url = '" . $url . "', descr_min = '" . $descr_min . "', description = '" . $description . "', cid = " . $cid . ", image = '" . $image . "' WHERE id = " . $id;
   return execQuery($query);
 }
 

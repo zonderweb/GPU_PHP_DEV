@@ -94,6 +94,15 @@ ADMIN PAGE TEMPLATE
                             require_once 'template/gpu-create.php';
                         }
                         break;
+                    case ($route[0] == 'admin' and @$route[1] === 'gpu-update' and isset($route[2])):
+                        if (getUser()) {
+                            $query = "SELECT id, title FROM gpucategory";
+                            $category = select($query);
+                            $query = "SELECT * FROM gpuarticle WHERE id = " . $route[2];
+                            $result = select($query)[0];
+                            require_once 'template/gpu-update.php';
+                        }
+                        break;
                     default:
                         require_once 'template/include/_admin404.php';
                 }

@@ -1,4 +1,11 @@
 <?php
+
+// ERROR
+ini_set('error_reporting', E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+// ERROR
+
 // UPDATE PAGE TEMPLATE
 $action = "Update";
 
@@ -18,7 +25,16 @@ if (isset($_POST['submit'])) {
 
     $id = $route[2];
 
-    $update = updateArticle($id, $title, $url, $descr_min, $description, $cid, $image);
+    $update = updateArticle(
+        $id,
+        $title,
+        $url,
+        $descr_min,
+        $description,
+        $cid,
+        $image
+    );
+
     if ($update) {
         setcookie("alert", "update ok", time() + 60 * 10);
         header('Location: ' . $_SERVER['REQUEST_URI']);
