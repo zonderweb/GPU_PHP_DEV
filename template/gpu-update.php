@@ -8,7 +8,7 @@ ini_set('display_startup_errors', 1);
 // ERROR
 
 
-$action = "Update";
+$action = "Оновити матеріал";
 
 if (isset($_POST['submit'])) {
   $title = trim($_POST['title']);

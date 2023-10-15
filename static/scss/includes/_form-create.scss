@@ -63,18 +63,23 @@
   min-height: 300px;
 }
 
-.btn-create-gpu input {
-  background: var(--ligth-fio-color);
-  padding: 15px;
-  font-size: 1rem;
-  text-transform: uppercase;
-  border: none;
-  color: var(--fio-color);
-  font-weight: 600;
-  border-radius: 15px;
-  cursor: pointer;
+.btn-create-gpu {
+  margin-top: 20px;
+
+  input {
+    background: var(--blue-color);
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: none;
+    color: var(--white-color);
+    font-weight: 500;
+    border-radius: 7px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
 }
 
-.btn-create-gpu input:hover {
-  opacity: .8;
-}
+.upl-img {}

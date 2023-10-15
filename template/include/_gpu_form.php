@@ -34,7 +34,7 @@
           ?>
         </select>
       </p>
-      <div>Photo: <input type="file" name="image"></div>
+      <p>Upload photo:<br> <input class="upl-img" type="file" name="image"></p>
       <?php
       if (isset($result['img']) and $result['img'] != '') {
         echo '<img src="/static/images/vendor/' . $result['img'] . '" style="width:300px">';
