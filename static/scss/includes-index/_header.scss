@@ -17,7 +17,8 @@
   font-size: 38px;
   line-height: 3.37rem;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: -2px;
   color: var(--main-color);
 
   span {
@@ -27,6 +28,8 @@
     color: var(--yellow-color);
   }
 }
+
+
 
 .dev-list {
   margin: 0;
@@ -69,4 +72,6 @@
   font-size: 2rem;
   line-height: 3.37rem;
   margin-bottom: 10px;
+  font-weight: 800;
+  letter-spacing: -2px;
 }

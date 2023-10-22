@@ -36,6 +36,7 @@
 .header-container {
   padding-left: 35px;
   padding-right: 25px;
+  text-align: center;
 }
 
 .header-container h2 {
@@ -59,8 +60,10 @@
 }
 
 .title-h1 {
-  font-size: 24px;
-  line-height: 30px;
+  font-size: 2rem;
+  line-height: 3.37rem;
+  letter-spacing: -1px;
+  font-weight: 800;
 }
 
 .logout {

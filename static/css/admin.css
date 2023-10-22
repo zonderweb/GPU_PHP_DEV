@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 :root {
   --main-font: "Open Sans", sans-serif;
   --sidebar-color: #0f172a;
@@ -41,6 +41,15 @@ body {
   height: 100%;
   overflow-x: hidden;
   color: var(--main-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
 }
 
 .c-red {
@@ -267,6 +276,7 @@ body {
 .header-container {
   padding-left: 35px;
   padding-right: 25px;
+  text-align: center;
 }
 
 .header-container h2 {
@@ -290,8 +300,10 @@ body {
 }
 
 .title-h1 {
-  font-size: 24px;
-  line-height: 30px;
+  font-size: 2rem;
+  line-height: 3.37rem;
+  letter-spacing: -1px;
+  font-weight: 800;
 }
 
 .logout {

@@ -21,7 +21,8 @@ ADMIN PAGE TEMPLATE
     if ($route[1] == '') $title = 'Головна сторінка';
     if ($route[1] == 'blog-part') $title = 'Блогова Частина';
     if ($route[1] == 'db-gpu') $title = 'База Вендорів Відеокарт';
-    if ($route[1] == 'gpu-create') $title = 'Створити новий запис => "База Вендорів Відеокарт"';
+    if ($route[1] == 'gpu-create') $title = 'Створити новий запис в "База Вендорів Відеокарт"';
+    if ($route[1] == 'create') $title = 'Створити новий матеріал в розділі "Блог"';
     ?>
     <div class="admin-area">
         <div class="left-area">
@@ -101,6 +102,22 @@ ADMIN PAGE TEMPLATE
                             $query = "SELECT * FROM gpuarticle WHERE id = " . $route[2];
                             $result = select($query)[0];
                             require_once 'template/gpu-update.php';
+                        }
+                        break;
+                    case ($route[0] == 'admin' and @$route[1] === 'create'):
+                        if (getUser()) {
+                            $query = "SELECT id, title FROM category";
+                            $category = select($query);
+                            require_once 'template/create.php';
+                        }
+                        break;
+                    case ($route[0] == 'admin' and @$route[1] === 'update' and isset($route[2])):
+                        if (getUser()) {
+                            $query = "SELECT id, title FROM category";
+                            $category = select($query);
+                            $query = "SELECT * FROM info WHERE id = " . $route[2];
+                            $result = select($query)[0];
+                            require_once 'template/update.php';
                         }
                         break;
                     default:

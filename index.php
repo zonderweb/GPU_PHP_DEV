@@ -1,4 +1,10 @@
 <?php
+// if ERROR
+ini_set('error_reporting', E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+// ERROR
+
 require_once 'config/db.php';
 require_once 'core/function_db.php';
 require_once 'core/function.php';
@@ -14,7 +20,7 @@ $route = explodeURL($route);
 
 switch ($route) {
   case ($route[0] == ''):
-    $query = 'SELECT * FROM info LIMIT 10';
+    $query = 'SELECT * FROM info ORDER BY id DESC LIMIT 10';
     $result = select($query);
     require_once 'template/main.php';
     break;
@@ -60,22 +66,6 @@ switch ($route) {
       exit;
     }
     header("Location: /");
-    break;
-  case ($route[0] == 'admin' and @$route[1] === 'create'):
-    if (getUser()) {
-      $query = "SELECT id, title FROM category";
-      $category = select($query);
-      require_once 'template/create.php';
-    }
-    break;
-  case ($route[0] == 'admin' and @$route[1] === 'update' and isset($route[2])):
-    if (getUser()) {
-      $query = "SELECT id, title FROM category";
-      $category = select($query);
-      $query = "SELECT * FROM info WHERE id = " . $route[2];
-      $result = select($query)[0];
-      require_once 'template/update.php';
-    }
     break;
   case ($route[0] == 'admin'):
     $query = 'SELECT * FROM info ORDER BY id DESC';

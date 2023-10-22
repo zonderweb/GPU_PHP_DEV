@@ -2,7 +2,7 @@
 // CREATE PAGE TEMPLATE
 
 
-$action = "Create";
+$action = "Створити";
 
 if (isset($_POST['submit'])) {
     $title = trim($_POST['title']);
@@ -36,6 +36,4 @@ if (isset($_POST['submit'])) {
     }
 }
 
-echo "<h1>Створити матеріал</h1>";
-
-require_once '_form.php';
+require_once 'include/_form.php';

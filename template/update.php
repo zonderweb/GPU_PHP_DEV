@@ -7,7 +7,7 @@ ini_set('display_startup_errors', 1);
 // ERROR
 
 // UPDATE PAGE TEMPLATE
-$action = "Update";
+$action = "Оновити";
 
 if (isset($_POST['submit'])) {
     $title = trim($_POST['title']);
@@ -37,7 +37,8 @@ if (isset($_POST['submit'])) {
 
     if ($update) {
         setcookie("alert", "update ok", time() + 60 * 10);
-        header('Location: ' . $_SERVER['REQUEST_URI']);
+        // header('Location: ' . $_SERVER['REQUEST_URI']);
+        header('Location: /admin/blog-part');
     } else {
         setcookie("alert", "update error", time() + 60 * 10);
         header('Location: ' . $_SERVER['REQUEST_URI']);
@@ -51,8 +52,4 @@ if (isset($_COOKIE['alert'])) {
     echo $alert;
 }
 
-echo "<h1>Оновити матеріал</h1>";
-
-require_once '_form.php';
-
-echo "<a href='/admin'>На головну Admin</a>";
+require_once 'include/_form.php';
