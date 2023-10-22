@@ -283,6 +283,15 @@ h6 {
   font-size: 1.375rem;
 }
 
+.admin-subtitle span {
+  vertical-align: top;
+  line-height: 1.625rem;
+  font-size: 2rem;
+  color: var(--blue-color);
+  font-weight: 400;
+  margin-right: 15px;
+}
+
 .admin-main {
   grid-area: main;
   background: var(--main-area-color);

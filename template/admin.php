@@ -18,12 +18,12 @@ ADMIN PAGE TEMPLATE
     if (!getUser()) {
         header("Location: /login");
     }
-    if (@$route[1] == '') $title = 'Головна сторінка';
-    if (@$route[1] == 'blog-part') $title = 'Блогова Частина';
-    if (@$route[1] == 'db-gpu') $title = 'База Вендорів Відеокарт';
-    if (@$route[1] == 'gpu-create') $title = 'Створити новий запис в "Базі Вендорів Відеокарт"';
-    if (@$route[1] == 'create') $title = 'Створити новий матеріал в розділі "Блог"';
-    if (@$route[1] == 'gpu-update' or @$route[1] == 'update') $title = 'Редагувати матеріал';
+    if (@$route[1] == '') $title = '<span class="material-symbols-outlined">dashboard</span>' . 'Dashboard';
+    if (@$route[1] == 'blog-part') $title = '<span class="material-symbols-outlined">article</span>' . 'Блогова Частина';
+    if (@$route[1] == 'db-gpu') $title = '<span class="material-symbols-outlined">developer_board</span>' . 'База Вендорів Відеокарт';
+    if (@$route[1] == 'gpu-create') $title = '<span class="material-symbols-outlined">draw</span>' . 'Створити новий запис в "Базі Вендорів Відеокарт"';
+    if (@$route[1] == 'create') $title = '<span class="material-symbols-outlined">draw</span>' . 'Створити новий матеріал в розділі "Блог"';
+    if (@$route[1] == 'gpu-update' or @$route[1] == 'update') $title = '<span class="material-symbols-outlined">edit_square</span>' . 'Редагувати матеріал';
     ?>
     <div class="admin-area">
         <div class="left-area">
@@ -70,7 +70,7 @@ ADMIN PAGE TEMPLATE
             </div>
             <div class="header-bottom">
                 <div class="header-container">
-                    <h2><?php echo $title; ?></h2>
+                    <h2 class="admin-subtitle"><?php echo $title; ?></h2>
                 </div>
             </div>
 
