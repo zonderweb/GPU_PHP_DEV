@@ -18,11 +18,12 @@ ADMIN PAGE TEMPLATE
     if (!getUser()) {
         header("Location: /login");
     }
-    if ($route[1] == '') $title = 'Головна сторінка';
-    if ($route[1] == 'blog-part') $title = 'Блогова Частина';
-    if ($route[1] == 'db-gpu') $title = 'База Вендорів Відеокарт';
-    if ($route[1] == 'gpu-create') $title = 'Створити новий запис в "База Вендорів Відеокарт"';
-    if ($route[1] == 'create') $title = 'Створити новий матеріал в розділі "Блог"';
+    if (@$route[1] == '') $title = 'Головна сторінка';
+    if (@$route[1] == 'blog-part') $title = 'Блогова Частина';
+    if (@$route[1] == 'db-gpu') $title = 'База Вендорів Відеокарт';
+    if (@$route[1] == 'gpu-create') $title = 'Створити новий запис в "Базі Вендорів Відеокарт"';
+    if (@$route[1] == 'create') $title = 'Створити новий матеріал в розділі "Блог"';
+    if (@$route[1] == 'gpu-update' or @$route[1] == 'update') $title = 'Редагувати матеріал';
     ?>
     <div class="admin-area">
         <div class="left-area">
@@ -79,7 +80,7 @@ ADMIN PAGE TEMPLATE
 
                 <?php
                 switch ($route) {
-                    case ($route[1] == ''):
+                    case (@$route[1] == ''):
                         require_once 'template/include/_admin-index.php';
                         break;
                     case ($route[1] == 'db-gpu'):
