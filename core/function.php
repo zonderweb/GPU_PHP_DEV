@@ -179,8 +179,23 @@ function clearCookies()
   unset($_GET['login']);
 }
 
-function createArticle($title, $url, $descr_min, $description, $cid, $image)
-{
+function createCategory(
+  $url,
+  $title,
+  $description
+) {
+  $query = "INSERT INTO category (url,title,description) VALUES ('" . $url . "', '" . $title . "','" . $description . "')";
+  return execQuery($query);
+}
+
+function createArticle(
+  $title,
+  $url,
+  $descr_min,
+  $description,
+  $cid,
+  $image
+) {
   $query = "INSERT INTO info (title, url, descr_min, description, cid, image) VALUES ('" . $title . "', '" . $url . "', '" . $descr_min . "', '" . $description . "', " . $cid . ", '" . $image . "')";
   return execQuery($query);
 }
