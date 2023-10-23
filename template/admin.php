@@ -22,7 +22,7 @@ ADMIN PAGE TEMPLATE
     if (@$route[1] == 'blog-part') $title = '<span class="material-symbols-outlined">article</span>' . 'Блогова Частина';
     if (@$route[1] == 'db-gpu') $title = '<span class="material-symbols-outlined">developer_board</span>' . 'База Вендорів Відеокарт';
     if (@$route[1] == 'gpu-create') $title = '<span class="material-symbols-outlined">draw</span>' . 'Створити новий запис в "Базі Вендорів Відеокарт"';
-    if (@$route[1] == 'create') $title = '<span class="material-symbols-outlined">draw</span>' . 'Створити новий матеріал в розділі "Блог"';
+    if (@$route[1] == 'create') $title = '<span class="material-symbols-outlined">draw</span>' . 'Створити новий матеріал в основних категоріях';
     if (@$route[1] == 'gpu-update' or @$route[1] == 'update') $title = '<span class="material-symbols-outlined">edit_square</span>' . 'Редагувати матеріал';
     if (@$route[1] == 'create-cat') $title = '<span class="material-symbols-outlined">draw</span>' . 'Створити нову категорію';
     ?>

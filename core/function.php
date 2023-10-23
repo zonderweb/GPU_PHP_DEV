@@ -5,15 +5,19 @@ function getMainData()
 {
   global $result;
   $out = '';
-  for ($i = 0; $i < count($result); $i++) {
-    $out .= '<div class="column">';
-    $out .= '<img class="img-title" src="/static/images/' . $result[$i]['image'] . '" width=285>';
-    $out .= '<h3 class="title title-main">' . $result[$i]['title'] . '</h3>';
-    $out .= '<p>' . $result[$i]['descr_min'] . '</p>';
-    $out .= '<div><a href="/article/' . $result[$i]['url'] . '">Читати далі</a></div>';
-    $out .= '</div>';
+  if ($result == NULL) {
+    header('Location: /404.php');
+  } else {
+    for ($i = 0; $i < count($result); $i++) {
+      $out .= '<div class="column">';
+      $out .= '<img class="img-title" src="/static/images/' . $result[$i]['image'] . '" width=285>';
+      $out .= '<h3 class="title title-main">' . $result[$i]['title'] . '</h3>';
+      $out .= '<p>' . $result[$i]['descr_min'] . '</p>';
+      $out .= '<div><a href="/article/' . $result[$i]['url'] . '">Читати далі</a></div>';
+      $out .= '</div>';
+    }
+    return $out;
   }
-  return $out;
 }
 
 // ВИВЕДЕННЯ ПОВНОЇ СТАТТІ
