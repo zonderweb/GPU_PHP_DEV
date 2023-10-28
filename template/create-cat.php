@@ -7,9 +7,14 @@ if (isset($_POST['submit'])) {
   $url = trim($_POST['url']);
   $description = trim($_POST['description']);
 
-  $createCat = createCategory($url, $title, $description);
+  $createCat = createCategory(
+    $title,
+    $url,
+    $description
+  );
+
   if ($createCat) {
-    header('Location: /admin/blog-part');
+    header('Location: /admin/admin-list-cat');
   } else {
     setcookie("alert", "create error", time() + 60 * 10);
   }
@@ -19,10 +24,10 @@ if (isset($_POST['submit'])) {
     unset($_COOKIE['alert']);
     echo $alert;
   } else {
-    $result = array(
-      "url" => "",
+    $editCat = array(
       "title" => "",
-      "description" => ""
+      "url" => "",
+      "description" => "",
     );
   }
 }

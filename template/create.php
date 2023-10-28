@@ -13,7 +13,15 @@ if (isset($_POST['submit'])) {
 
     move_uploaded_file($_FILES['image']['tmp_name'], 'static/images/' . $_FILES['image']['name']);
     $image = $_FILES['image']['name'];
-    $create = createArticle($title, $url, $descr_min, $description, $cid, $image);
+    $create = createArticle(
+        $title,
+        $url,
+        $descr_min,
+        $description,
+        $cid,
+        $image
+    );
+
     if ($create) {
         header('Location: /admin/blog-part');
     } else {

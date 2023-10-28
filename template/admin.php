@@ -26,6 +26,7 @@ ADMIN PAGE TEMPLATE
     if (@$route[1] == 'gpu-update' or @$route[1] == 'update') $title = '<span class="material-symbols-outlined">edit_square</span>' . 'Редагувати матеріал';
     if (@$route[1] == 'create-cat') $title = '<span class="material-symbols-outlined">draw</span>' . 'Створити нову категорію';
     if (@$route[1] == 'admin-list-cat') $title = '<span class="material-symbols-outlined">list</span>' . 'Список категорій';
+    if (@$route[1] == 'edit-cat') $title = '<span class="material-symbols-outlined">list</span>' . 'Редагувати категорію';
     ?>
     <div class="admin-area">
         <div class="left-area">
@@ -116,8 +117,6 @@ ADMIN PAGE TEMPLATE
                         //Create Category
                     case ($route[0] == 'admin' and @$route[1] === 'create-cat'):
                         if (getUser()) {
-                            $query = "SELECT id, title FROM category";
-                            $listInfoCat = select($query);
                             require_once 'template/create-cat.php';
                         }
                         break;
@@ -131,6 +130,17 @@ ADMIN PAGE TEMPLATE
                         }
                         break;
                         //Create list Category END
+                        //EDIT Category
+                    case ($route[0] == 'admin' and @$route[1] === 'edit-cat' and isset($route[2])):
+                        if (getUser()) {
+                            $query = "SELECT id, title FROM category";
+                            $category = select($query);
+                            $query = "SELECT * FROM category WHERE id = " . $route[2];
+                            $editCat = select($query)[0];
+                            require_once 'template/admin-cat-update.php';
+                        }
+                        break;
+                        // EDIT Category END
                     case ($route[0] == 'admin' and @$route[1] === 'create'):
                         if (getUser()) {
                             $query = "SELECT id, title FROM category";

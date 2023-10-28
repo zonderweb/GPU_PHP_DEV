@@ -184,11 +184,21 @@ function clearCookies()
 }
 
 function createCategory(
-  $url,
   $title,
+  $url,
   $description
 ) {
-  $query = "INSERT INTO category (url,title,description) VALUES ('" . $url . "', '" . $title . "','" . $description . "')";
+  $query = "INSERT INTO category (title, url, description) VALUES ('" . $title . "','" . $url . "', '" . $description . "')";
+  return execQuery($query);
+}
+
+function updateCategory(
+  $title,
+  $url,
+  $description,
+  $id
+) {
+  $query = "UPDATE category SET title = '" . $title . "', url = '" . $url . "', description = '" . $description . "' WHERE id = " . $id;
   return execQuery($query);
 }
 

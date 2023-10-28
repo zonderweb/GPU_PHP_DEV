@@ -80,6 +80,14 @@ h6 {
   font-size: 0.875rem;
 }
 
+.w-25 {
+  width: 25%;
+}
+
+.w-10 {
+  width: 10%;
+}
+
 /* LEFT DASBOARD */
 .left-menu {
   margin-bottom: 40px;
