@@ -168,6 +168,10 @@ h6 {
   line-height: 1.25rem;
   color: var(--white-color);
   font-weight: 500;
+  padding-bottom: 10px;
+}
+.m-left-item:hover {
+  opacity: 0.5;
 }
 
 .m-left-item a {

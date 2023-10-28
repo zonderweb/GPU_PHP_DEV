@@ -40,7 +40,7 @@ ADMIN PAGE TEMPLATE
                     <span class="left-dash-subtitle">Адмін панель</span>
                     <ul class="m-left-list">
                         <li class="m-left-item">
-                            <a href="/admin"><span class="material-symbols-outlined">home</span>Загальний звіт</a>
+                            <a href="/admin"><span class="material-symbols-outlined">dashboard</span>Загальний звіт</a>
                         </li>
                     </ul>
                 </div>
@@ -60,13 +60,16 @@ ADMIN PAGE TEMPLATE
                     <span class="left-dash-subtitle">Огляди та статті</span>
                     <ul class="m-left-list">
                         <li class="m-left-item">
-                            <a href="/admin/create"><span class="material-symbols-outlined">add_box</span>Створити матеріал</a>
-                        </li>
-                        <li class="m-left-item">
-                            <a href="/admin/admin-list-cat"><span class="material-symbols-outlined">add_box</span>Список Категорій</a>
+                            <a href="/admin/admin-list-cat"><span class="material-symbols-outlined">list_alt</span>Список Категорій</a>
                         </li>
                         <li class="m-left-item">
                             <a href="/admin/create-cat"><span class="material-symbols-outlined">add_box</span>Створити Категорію</a>
+                        </li>
+                        <li class="m-left-item">
+                            <a href="/admin/blog-part"><span class="material-symbols-outlined">list_alt</span>Список Матеріалів</a>
+                        </li>
+                        <li class="m-left-item">
+                            <a href="/admin/create"><span class="material-symbols-outlined">add_box</span>Створити матеріал</a>
                         </li>
                     </ul>
                 </div>
