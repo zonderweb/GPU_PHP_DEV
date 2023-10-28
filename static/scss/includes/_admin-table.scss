@@ -1,0 +1,60 @@
+.list-category-admin {
+  border-collapse: collapse;
+  width: 100%;
+
+  th {
+    background: #97A0A9;
+    color: var(--white-color);
+    text-align: left;
+  }
+
+  td,
+  th {
+    padding: 10px 15px;
+    border: 1px solid rgba(0, 0, 0, .1);
+  }
+
+  tr {
+    &:hover {
+      background: rgba(151, 160, 169, .1);
+    }
+  }
+}
+
+.edit-cat,
+.del-cat {
+  line-height: 26px;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  span {
+    line-height: 26px;
+    vertical-align: top;
+    font-size: 22px;
+  }
+}
+
+.edit-cat {
+  color: var(--blue-color);
+}
+
+.del-cat {
+  color: var(--red-color);
+
+  span {
+    margin-right: 5px;
+  }
+}
+
+.war-del {
+  background: rgba(239, 68, 68, .1);
+}
+
+.war-edit {
+  background: rgba(21, 101, 192, .1);
+}

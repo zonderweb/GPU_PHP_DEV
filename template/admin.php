@@ -25,6 +25,7 @@ ADMIN PAGE TEMPLATE
     if (@$route[1] == 'create') $title = '<span class="material-symbols-outlined">draw</span>' . 'Створити новий матеріал в основних категоріях';
     if (@$route[1] == 'gpu-update' or @$route[1] == 'update') $title = '<span class="material-symbols-outlined">edit_square</span>' . 'Редагувати матеріал';
     if (@$route[1] == 'create-cat') $title = '<span class="material-symbols-outlined">draw</span>' . 'Створити нову категорію';
+    if (@$route[1] == 'admin-list-cat') $title = '<span class="material-symbols-outlined">list</span>' . 'Список категорій';
     ?>
     <div class="admin-area">
         <div class="left-area">
@@ -59,6 +60,9 @@ ADMIN PAGE TEMPLATE
                     <ul class="m-left-list">
                         <li class="m-left-item">
                             <a href="/admin/create"><span class="material-symbols-outlined">add_box</span>Створити матеріал</a>
+                        </li>
+                        <li class="m-left-item">
+                            <a href="/admin/admin-list-cat"><span class="material-symbols-outlined">add_box</span>Список Категорій</a>
                         </li>
                         <li class="m-left-item">
                             <a href="/admin/create-cat"><span class="material-symbols-outlined">add_box</span>Створити Категорію</a>
@@ -109,8 +113,6 @@ ADMIN PAGE TEMPLATE
                             require_once 'template/gpu-update.php';
                         }
                         break;
-
-
                         //Create Category
                     case ($route[0] == 'admin' and @$route[1] === 'create-cat'):
                         if (getUser()) {
@@ -120,8 +122,15 @@ ADMIN PAGE TEMPLATE
                         }
                         break;
                         //Create Category END
-
-
+                        //Create list Category
+                    case ($route[0] == 'admin' and @$route[1] === 'admin-list-cat'):
+                        if (getUser()) {
+                            $query = "SELECT * FROM category";
+                            $listCat = select($query);
+                            require_once 'template/admin-list-cat.php';
+                        }
+                        break;
+                        //Create list Category END
                     case ($route[0] == 'admin' and @$route[1] === 'create'):
                         if (getUser()) {
                             $query = "SELECT id, title FROM category";

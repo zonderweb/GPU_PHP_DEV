@@ -68,6 +68,18 @@ h6 {
   color: var(--orange-color);
 }
 
+.p-25 {
+  padding: 1.5625rem;
+}
+
+.bold-600 {
+  font-weight: 600;
+}
+
+.size-14 {
+  font-size: 0.875rem;
+}
+
 /* LEFT DASBOARD */
 .left-menu {
   margin-bottom: 40px;
@@ -482,6 +494,61 @@ h6 {
 .article-edit span {
   font-size: 1.125rem;
   line-height: 1.625rem;
+}
+
+.list-category-admin {
+  border-collapse: collapse;
+  width: 100%;
+}
+.list-category-admin th {
+  background: #97A0A9;
+  color: var(--white-color);
+  text-align: left;
+}
+.list-category-admin td,
+.list-category-admin th {
+  padding: 10px 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.list-category-admin tr:hover {
+  background: rgba(151, 160, 169, 0.1);
+}
+
+.edit-cat,
+.del-cat {
+  line-height: 26px;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+}
+.edit-cat:hover,
+.del-cat:hover {
+  text-decoration: underline;
+}
+.edit-cat span,
+.del-cat span {
+  line-height: 26px;
+  vertical-align: top;
+  font-size: 22px;
+}
+
+.edit-cat {
+  color: var(--blue-color);
+}
+
+.del-cat {
+  color: var(--red-color);
+}
+.del-cat span {
+  margin-right: 5px;
+}
+
+.war-del {
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.war-edit {
+  background: rgba(21, 101, 192, 0.1);
 }
 
 /*# sourceMappingURL=admin.css.map */
