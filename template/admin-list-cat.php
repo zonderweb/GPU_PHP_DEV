@@ -9,7 +9,6 @@
       </tr>
       <?php
       $out = '';
-
       for ($i = 0; $i < count($listCat); $i++) {
         $out .= '<tr>';
         $out .= '<td><span class="bold-600">' . $listCat[$i]['title'] . '</span></td>';

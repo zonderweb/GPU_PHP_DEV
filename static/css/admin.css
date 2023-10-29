@@ -88,6 +88,24 @@ h6 {
   width: 10%;
 }
 
+.text-u {
+  text-transform: uppercase;
+}
+
+.table-img {
+  max-width: 50px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.list-category-admin .th-ico-center {
+  text-align: center;
+}
+.list-category-admin .th-ico-center span {
+  vertical-align: top;
+}
+
 /* LEFT DASBOARD */
 .left-menu {
   margin-bottom: 40px;
@@ -511,6 +529,10 @@ h6 {
 .list-category-admin {
   border-collapse: collapse;
   width: 100%;
+}
+.list-category-admin td {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
 }
 .list-category-admin th {
   background: #97A0A9;

@@ -2,6 +2,11 @@
   border-collapse: collapse;
   width: 100%;
 
+  td {
+    font-size: .875rem;
+    line-height: 1.5rem;
+  }
+
   th {
     background: #97A0A9;
     color: var(--white-color);

@@ -62,3 +62,24 @@ h6 {
 .w-10 {
   width: 10%;
 }
+
+.text-u {
+  text-transform: uppercase;
+}
+
+.table-img {
+  max-width: 50px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.list-category-admin {
+  .th-ico-center {
+    text-align: center;
+
+    span {
+      vertical-align: top;
+    }
+  }
+}
