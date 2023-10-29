@@ -25,7 +25,26 @@ if (isset($_POST['submit'])) {
   move_uploaded_file($_FILES['image']['tmp_name'], 'static/images/vendor/' . $_FILES['image']['name']);
   $image = $_FILES['image']['name'];
 
-  $create = createArticleGpu($title, $url, $partNum, $description, $cid, $vendor, $gpuClock, $boostClock, $memoryClock, $graphPrc, $cores, $tmus, $rops, $memSize, $memType, $busW, $otherChange, $image);
+  $create = createArticleGpu(
+    $title,
+    $url,
+    $partNum,
+    $description,
+    $cid,
+    $vendor,
+    $gpuClock,
+    $boostClock,
+    $memoryClock,
+    $graphPrc,
+    $cores,
+    $tmus,
+    $rops,
+    $memSize,
+    $memType,
+    $busW,
+    $otherChange,
+    $image
+  );
   if ($create) {
     header('Location: /admin/db-gpu');
   } else {

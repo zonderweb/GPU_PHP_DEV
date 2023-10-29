@@ -1,8 +1,3 @@
-<?php
-// echo '<pre>';
-// var_dump($listGpuCat); 
-?>
-
 <div class="admin-article-wrapper">
   <div class="admin-article-item p-25">
     <table class="list-category-admin">

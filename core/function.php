@@ -270,6 +270,25 @@ function updateArticle($id, $title, $url, $descr_min, $description, $cid, $image
   return execQuery($query);
 }
 
+function createCategoryGpu(
+  $title,
+  $url,
+  $found,
+  $graphProc,
+  $cores,
+  $tmus,
+  $rops,
+  $memorySize,
+  $memoryType,
+  $busWidth,
+  $description,
+  $image
+) {
+  $query = "INSERT INTO gpucategory (title, url, found, `graph-processor`, cores, tmus, rops, `memory-size`, `memory-type`, `bus-width`, description, img) VALUES ('" . $title . "', '" . $url . "', '" . $found . "' , '" . $graphProc . "', " . $cores . ", " . $tmus . ", " . $rops . ", " . $memorySize . ", '" .  $memoryType . "', " . $busWidth . ", '" . $description . "', '" . $image . "')";
+
+  return execQuery($query);
+}
+
 function logout()
 {
   clearCookies();

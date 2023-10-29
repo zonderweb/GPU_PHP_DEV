@@ -28,6 +28,7 @@ ADMIN PAGE TEMPLATE
     if (@$route[1] == 'admin-list-cat') $title = '<span class="material-symbols-outlined">list</span>' . 'Список категорій';
     if (@$route[1] == 'edit-cat') $title = '<span class="material-symbols-outlined">list</span>' . 'Редагувати категорію';
     if (@$route[1] == 'cat-list-gpu') $title = '<span class="material-symbols-outlined">list</span>' . 'Список категорій Бази Відеокарт';
+    if (@$route[1] == 'create-gpu-cat') $title = '<span class="material-symbols-outlined">list</span>' . 'Створити нову категорію в Базі Відеокарт';
     ?>
     <div class="admin-area">
         <div class="left-area">
@@ -54,7 +55,7 @@ ADMIN PAGE TEMPLATE
                             <a href="/admin/cat-list-gpu"><span class="material-symbols-outlined">list_alt</span>Список Категорій</a>
                         </li>
                         <li class="m-left-item">
-                            <a href="/admin/"><span class="material-symbols-outlined">add_box</span>Створити Категорію</a>
+                            <a href="/admin/create-gpu-cat"><span class="material-symbols-outlined">add_box</span>Створити Категорію</a>
                         </li>
                         <li class="m-left-item">
                             <a href="/admin/db-gpu"><span class="material-symbols-outlined">list_alt</span>Список Матеріалів</a>
@@ -177,6 +178,13 @@ ADMIN PAGE TEMPLATE
                             require_once 'template/cat-list-gpu.php';
                         }
                         break;
+                        //Create GPU Category
+                    case ($route[0] == 'admin' and @$route[1] === 'create-gpu-cat'):
+                        if (getUser()) {
+                            require_once 'template/create-gpu-cat.php';
+                        }
+                        break;
+                        //Create GPU Category END
                     default:
                         require_once 'template/include/_admin404.php';
                 }
