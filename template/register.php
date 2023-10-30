@@ -20,7 +20,7 @@
             if (isset($_POST['submit'])) {
                 $err = [];
                 if (strlen($_POST['login']) < 4 or strlen($_POST['login']) > 30) {
-                    $err[] = "<span>Логін повинен бути не меньше 4 символів <br> і не більше 30!</span>";
+                    $err[] = "<span>Логін повинен бути не меньше 4 символів <br> та не більше 30!</span>";
                 }
                 if (isLoginExist($_POST['login'])) {
                     $err[] = "<span>Такий логін вже існує</span>";

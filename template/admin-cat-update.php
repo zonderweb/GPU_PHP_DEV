@@ -15,6 +15,7 @@ if (isset($_POST['submit'])) {
     $description,
     $id
   );
+
   if ($updateCat) {
     setcookie("alert", "update ok", time() + 60 * 10);
     header('Location: /admin/admin-list-cat');

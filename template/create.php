@@ -1,7 +1,5 @@
 <?php
 // CREATE PAGE TEMPLATE
-
-
 $action = "Створити";
 
 if (isset($_POST['submit'])) {
@@ -21,7 +19,6 @@ if (isset($_POST['submit'])) {
         $cid,
         $image
     );
-
     if ($create) {
         header('Location: /admin/blog-part');
     } else {
@@ -32,16 +29,16 @@ if (isset($_POST['submit'])) {
         setcookie("alert", "", time() - 60 * 10);
         unset($_COOKIE['alert']);
         echo $alert;
-    } else {
-        $result = array(
-            "title" => "",
-            "url" => "",
-            "descr_min" => "",
-            "description" => "",
-            "cid" => "",
-            "image" => "",
-        );
     }
+} else {
+    $result = array(
+        "title" => "",
+        "url" => "",
+        "descr_min" => "",
+        "description" => "",
+        "cid" => "",
+        "image" => "",
+    );
 }
 
 require_once 'include/_form.php';

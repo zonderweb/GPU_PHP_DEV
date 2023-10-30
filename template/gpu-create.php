@@ -55,27 +55,28 @@ if (isset($_POST['submit'])) {
     setcookie("alert", "", time() - 60 * 10);
     unset($_COOKIE['alert']);
     echo $alert;
-  } else {
-    $result = array(
-      "title" => "",
-      "url" => "",
-      "part-num" => "",
-      "description" => "",
-      "cid" => "",
-      "vendor" => "",
-      "gpu-clock" => "",
-      "boost-clock" => "",
-      "memory-clock" => "",
-      "graph-processor" => "",
-      "cores" => "",
-      "tmus" => "",
-      "rops" => "",
-      "memory-size" => "",
-      "memory-type" => "",
-      "bus-width" => "",
-      "other-change" => "",
-      "img" => "",
-    );
   }
+} else {
+  $result = array(
+    "title" => "",
+    "url" => "",
+    "part-num" => "",
+    "description" => "",
+    "cid" => "",
+    "vendor" => "",
+    "gpu-clock" => "",
+    "boost-clock" => "",
+    "memory-clock" => "",
+    "graph-processor" => "",
+    "cores" => "",
+    "tmus" => "",
+    "rops" => "",
+    "memory-size" => "",
+    "memory-type" => "",
+    "bus-width" => "",
+    "other-change" => "",
+    "img" => "",
+  );
 }
+
 require_once 'include/_gpu_form.php';

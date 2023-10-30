@@ -23,13 +23,14 @@ if (isset($_POST['submit'])) {
     setcookie("alert", "", time() - 60 * 10);
     unset($_COOKIE['alert']);
     echo $alert;
-  } else {
-    $editCat = array(
-      "title" => "",
-      "url" => "",
-      "description" => "",
-    );
   }
+} else {
+  $editCat = array(
+    "title" => "",
+    "url" => "",
+    "description" => "",
+  );
 }
+
 
 require_once 'include/_create-cat-form.php';

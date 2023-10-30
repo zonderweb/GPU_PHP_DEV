@@ -1,6 +1,6 @@
 <?php
-// CREATE GPU CATEGORY TEMPLATE
-$action = "Створити";
+// UPDATE GPU CATEGORY TEMPLATE
+$action = "Оновити";
 
 if (isset($_POST['submit'])) {
   $title = trim($_POST['title']);
@@ -15,10 +15,16 @@ if (isset($_POST['submit'])) {
   $busWidth = $_POST['bus-width'];
   $description = trim($_POST['description']);
 
-  move_uploaded_file($_FILES['image']['tmp_name'], 'static/images/gpucat/' . $_FILES['image']['name']);
-  $image = $_FILES['image']['name'];
+  if (isset($_FILES['image']['tmp_name']) and $_FILES['image']['tmp_name'] != '') {
+    move_uploaded_file($_FILES['image']['tmp_name'], 'static/images/gpucat/' . $_FILES['image']['name']);
+    $image = $_FILES['image']['name'];
+  } else {
+    $image = $result['img'];
+  }
 
-  $create = createCategoryGpu(
+  $id = $route[2];
+
+  $update = updateCategoryGpu(
     $title,
     $url,
     $found,
@@ -30,34 +36,24 @@ if (isset($_POST['submit'])) {
     $memoryType,
     $busWidth,
     $description,
-    $image
+    $image,
+    $id
   );
 
-  if ($create) {
+  if ($update) {
+    setcookie("alert", "update ok", time() + 60 * 10);
     header('Location: /admin/cat-list-gpu');
   } else {
     setcookie("alert", "create error", time() + 60 * 10);
+    header('Location: ' . $_SERVER['REQUEST_URI']);
   }
-  if (isset($_COOKIE['alert'])) {
-    $alert = $_COOKIE['alert'];
-    setcookie("alert", "", time() - 60 * 10);
-    unset($_COOKIE['alert']);
-    echo $alert;
-  }
-} else {
-  $result = array(
-    "title" => "",
-    "url" => "",
-    "found" => "",
-    "graph-processor" => "",
-    "cores" => "",
-    "tmus" => "",
-    "rops" => "",
-    "memory-size" => "",
-    "memory-type" => "",
-    "bus-width" => "",
-    "description" => "",
-    "img" => "",
-  );
 }
+
+if (isset($_COOKIE['alert'])) {
+  $alert = $_COOKIE['alert'];
+  setcookie("alert", "", time() - 60 * 10);
+  unset($_COOKIE['alert']);
+  echo $alert;
+}
+
 require_once 'include/_category_gpu_form.php';

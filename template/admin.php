@@ -1,6 +1,20 @@
-<!-- // 
-ADMIN PAGE TEMPLATE 
-// -->
+<?php
+if (!getUser()) {
+    header("Location: /login");
+}
+if (@$route[1] == '') $title = '<span class="material-symbols-outlined">dashboard</span>' . 'Dashboard';
+if (@$route[1] == 'blog-part') $title = '<span class="material-symbols-outlined">article</span>' . 'Блогова Частина';
+if (@$route[1] == 'db-gpu') $title = '<span class="material-symbols-outlined">developer_board</span>' . 'База Вендорів Відеокарт';
+if (@$route[1] == 'gpu-create') $title = '<span class="material-symbols-outlined">draw</span>' . 'Створити новий запис в "Базі Вендорів Відеокарт"';
+if (@$route[1] == 'create') $title = '<span class="material-symbols-outlined">draw</span>' . 'Створити новий матеріал в основних категоріях';
+if (@$route[1] == 'gpu-update' or @$route[1] == 'update') $title = '<span class="material-symbols-outlined">edit_square</span>' . 'Редагувати матеріал';
+if (@$route[1] == 'create-cat') $title = '<span class="material-symbols-outlined">draw</span>' . 'Створити нову категорію';
+if (@$route[1] == 'admin-list-cat') $title = '<span class="material-symbols-outlined">list</span>' . 'Список категорій';
+if (@$route[1] == 'edit-cat') $title = '<span class="material-symbols-outlined">list</span>' . 'Редагувати категорію';
+if (@$route[1] == 'cat-list-gpu') $title = '<span class="material-symbols-outlined">list</span>' . 'Список категорій Бази Відеокарт';
+if (@$route[1] == 'create-gpu-cat') $title = '<span class="material-symbols-outlined">list</span>' . 'Створити нову категорію в Базі Відеокарт';
+if (@$route[1] == 'update-gpu-cat') $title = '<span class="material-symbols-outlined">list</span>' . 'Оновити категорію в Базі Відеокарт';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,22 +28,6 @@ ADMIN PAGE TEMPLATE
 </head>
 
 <body>
-    <?php
-    if (!getUser()) {
-        header("Location: /login");
-    }
-    if (@$route[1] == '') $title = '<span class="material-symbols-outlined">dashboard</span>' . 'Dashboard';
-    if (@$route[1] == 'blog-part') $title = '<span class="material-symbols-outlined">article</span>' . 'Блогова Частина';
-    if (@$route[1] == 'db-gpu') $title = '<span class="material-symbols-outlined">developer_board</span>' . 'База Вендорів Відеокарт';
-    if (@$route[1] == 'gpu-create') $title = '<span class="material-symbols-outlined">draw</span>' . 'Створити новий запис в "Базі Вендорів Відеокарт"';
-    if (@$route[1] == 'create') $title = '<span class="material-symbols-outlined">draw</span>' . 'Створити новий матеріал в основних категоріях';
-    if (@$route[1] == 'gpu-update' or @$route[1] == 'update') $title = '<span class="material-symbols-outlined">edit_square</span>' . 'Редагувати матеріал';
-    if (@$route[1] == 'create-cat') $title = '<span class="material-symbols-outlined">draw</span>' . 'Створити нову категорію';
-    if (@$route[1] == 'admin-list-cat') $title = '<span class="material-symbols-outlined">list</span>' . 'Список категорій';
-    if (@$route[1] == 'edit-cat') $title = '<span class="material-symbols-outlined">list</span>' . 'Редагувати категорію';
-    if (@$route[1] == 'cat-list-gpu') $title = '<span class="material-symbols-outlined">list</span>' . 'Список категорій Бази Відеокарт';
-    if (@$route[1] == 'create-gpu-cat') $title = '<span class="material-symbols-outlined">list</span>' . 'Створити нову категорію в Базі Відеокарт';
-    ?>
     <div class="admin-area">
         <div class="left-area">
             <div class="left-dashboard">
@@ -93,14 +91,15 @@ ADMIN PAGE TEMPLATE
             </div>
             <div class="header-bottom">
                 <div class="header-container">
-                    <h2 class="admin-subtitle"><?php echo $title; ?></h2>
+                    <h2 class="admin-subtitle">
+                        <?php echo $title; ?>
+                    </h2>
                 </div>
             </div>
-
         </header>
+
         <main class="admin-main">
             <div class="main-container">
-
                 <?php
                 switch ($route) {
                     case (@$route[1] == ''):
@@ -135,15 +134,6 @@ ADMIN PAGE TEMPLATE
                         }
                         break;
                         //Create Category END
-                        //Create list Category
-                    case ($route[0] == 'admin' and @$route[1] === 'admin-list-cat'):
-                        if (getUser()) {
-                            $query = "SELECT * FROM category";
-                            $listCat = select($query);
-                            require_once 'template/admin-list-cat.php';
-                        }
-                        break;
-                        //Create list Category END
                         //EDIT Category
                     case ($route[0] == 'admin' and @$route[1] === 'edit-cat' and isset($route[2])):
                         if (getUser()) {
@@ -155,6 +145,15 @@ ADMIN PAGE TEMPLATE
                         }
                         break;
                         // EDIT Category END
+                        //Create list Category
+                    case ($route[0] == 'admin' and @$route[1] === 'admin-list-cat'):
+                        if (getUser()) {
+                            $query = "SELECT * FROM category";
+                            $listCat = select($query);
+                            require_once 'template/admin-list-cat.php';
+                        }
+                        break;
+                        //Create list Category END
                     case ($route[0] == 'admin' and @$route[1] === 'create'):
                         if (getUser()) {
                             $query = "SELECT id, title FROM category";
@@ -185,11 +184,21 @@ ADMIN PAGE TEMPLATE
                         }
                         break;
                         //Create GPU Category END
+                        //EDIT GPU Category
+                    case ($route[0] == 'admin' and @$route[1] === 'update-gpu-cat' and isset($route[2])):
+                        if (getUser()) {
+                            $query = "SELECT id, title FROM gpucategory";
+                            $category = select($query);
+                            $query = "SELECT * FROM gpucategory WHERE id = " . $route[2];
+                            $result = select($query)[0];
+                            require_once 'template/update-gpu-cat.php';
+                        }
+                        break;
+                        // EDIT GPU Category END
                     default:
                         require_once 'template/include/_admin404.php';
                 }
                 ?>
-
             </div>
         </main>
     </div>

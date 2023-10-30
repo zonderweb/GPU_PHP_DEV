@@ -13,22 +13,6 @@
       <p>Bus Width (bit):<br> <input type="number" name="bus-width" value="<?php if (isset($result['bus-width'])) echo $result['bus-width']; ?>"></p>
       <p>Description: <textarea name="description"><?php if (isset($result['description'])) echo $result['description']; ?></textarea>
       </p>
-
-      <!-- <p>Select category:<br>
-        <select name="cid">
-          <?php
-          // $out = '';
-          // for ($i = 0; $i < count($category); $i++) {
-          //   if ($category[$i]['id'] === $result['cid']) {
-          //     $out .= '<option value="' . $category[$i]['id'] . '" selected>' . $category[$i]['title'] . "</option>";
-          //   } else {
-          //     $out .= '<option value="' . $category[$i]['id'] . '">' . $category[$i]['title'] . "</option>";
-          //   }
-          // }
-          // echo $out;
-          ?>
-        </select>
-      </p> -->
       <p>Upload photo:<br> <input class="upl-img" type="file" name="image"></p>
       <?php
       if (isset($result['img']) and $result['img'] != '') {
