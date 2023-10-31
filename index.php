@@ -76,6 +76,15 @@ switch ($route) {
     }
     header("Location: /");
     break;
+  case ($route[0] == 'admin' and @$route[1] === 'delete-gpu-cat' and isset($route[2])):
+    if (getUser()) {
+      $query = "DELETE FROM gpucategory WHERE id=" . $route[2];
+      execQuery($query);
+      header("Location: /admin/cat-list-gpu");
+      exit;
+    }
+    header("Location: /");
+    break;
   case ($route[0] == 'admin'):
     $query = 'SELECT * FROM info ORDER BY id DESC';
     $queryGpu = 'SELECT * FROM gpuarticle ORDER BY id DESC';

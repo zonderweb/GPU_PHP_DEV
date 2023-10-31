@@ -20,7 +20,7 @@
         $out .= '<td><span>' . $listGpuCat[$i]['graph-processor'] . '</span></td>';
         $out .= '<td><span>' . $listGpuCat[$i]['memory-type'] . '</span></td>';
         $out .= '<td class="war-edit"><a class="edit-cat" href="update-gpu-cat/' . $listGpuCat[$i]['id'] . '" onclick="return confirm(\'Точно оновити?\')"><span class="material-symbols-outlined">edit</span></a></td>';
-        $out .= '<td class="war-del"><a class="del-cat" href="delete-category/' . $listGpuCat[$i]['id'] . '" onclick="return confirm(\'Точно видалити?\')"><span class="material-symbols-outlined">remove_selection</span></a></td>';
+        $out .= '<td class="war-del"><a class="del-cat" href="delete-gpu-cat/' . $listGpuCat[$i]['id'] . '" onclick="return confirm(\'Точно видалити?\')"><span class="material-symbols-outlined">remove_selection</span></a></td>';
         $out .= '</tr>';
       }
       echo $out;
