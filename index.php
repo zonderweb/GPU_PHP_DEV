@@ -20,7 +20,7 @@ $route = explodeURL($route);
 
 switch ($route) {
   case ($route[0] == ''):
-    $query = 'SELECT * FROM info ORDER BY id DESC LIMIT 10';
+    $query = 'SELECT * FROM info ORDER BY id DESC LIMIT 4';
     $result = select($query);
     require_once 'template/main.php';
     break;

@@ -60,6 +60,45 @@ h6 {
   letter-spacing: -2px;
 }
 
+.article-title {
+  line-height: 2.625rem;
+}
+
+.article-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.article-item {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.article-item div {
+  margin-bottom: auto;
+}
+.article-item div .img-article-title {
+  max-width: 100%;
+  height: auto;
+}
+.article-item .article-item-link {
+  text-decoration: none;
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: normal;
+  color: var(--main-color);
+}
+.article-item .article-item-link:hover {
+  text-decoration: underline;
+}
+.article-item .main-article-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: normal;
+}
+
 .header {
   grid-area: header;
   padding: 0 40px;
@@ -172,6 +211,7 @@ h6 {
 .responsive-img {
   max-width: 100%;
   height: auto;
+  margin: 0 auto;
 }
 
 /* GPU DB */
