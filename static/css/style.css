@@ -60,6 +60,10 @@ h6 {
   letter-spacing: -2px;
 }
 
+.bold {
+  font-weight: 600;
+}
+
 .article-title {
   line-height: 2.625rem;
 }
@@ -416,6 +420,10 @@ h6 {
 
 .ip-check {
   margin-right: 5px;
+}
+
+.main-table-founders {
+  margin-bottom: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */
