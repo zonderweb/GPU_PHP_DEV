@@ -1,0 +1,177 @@
+/* GPU Category */
+
+.wrap-category {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.left-category-side {
+  width: 60%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+
+  .gpudb-img {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-width: 85%;
+  }
+}
+
+.rigth-category-side {
+  padding: 10px;
+}
+
+.category-item-info {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: .875rem;
+  line-height: 1.3125rem;
+  font-weight: 400;
+
+  tr {
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+
+    &:hover {
+      background: rgba(231, 234, 243, 0.4);
+    }
+  }
+
+  td {
+    padding: 10px;
+  }
+}
+
+.spec-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: start;
+  margin-bottom: 20px;
+}
+
+.spec-list li {
+  padding: 5px 10px;
+  border: 1px solid rgba(0, 0, 0, .1);
+  background-color: rgba(0, 0, 0, .1);
+  color: #555;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-right: 10px;
+}
+
+.spec-list li span {
+  text-transform: lowercase;
+}
+
+.menu-box-category {
+  margin-bottom: 40px;
+}
+
+.founders-category {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.founders-category li {
+  margin-right: 20px;
+}
+
+.founders-category li a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+.founders-category li a:hover {
+  text-decoration: underline;
+}
+
+.part-num {
+  color: var(--link-color);
+  text-transform: uppercase;
+}
+
+.content-gpudb {
+  margin-bottom: 40px;
+}
+
+.vendor-title {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 1.7rem;
+  color: var(--white-color);
+  background: var(--main-color);
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 7px;
+
+  span {
+    color: var(--yellow-color);
+    text-transform: uppercase;
+    font-style: normal;
+  }
+}
+
+.vendor-subtitle {
+  font-weight: 500;
+  color: var(--main-color);
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+.vendor-mini-img {
+  max-width: 50px;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+.vendor-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.vendor-table td,
+.vendor-table th {
+  border: 1px solid rgba(0, 0, 0, .1);
+  padding: 8px;
+}
+
+.vendor-table td {
+  font-size: 14px;
+}
+
+.vendor-table tr:nth-child(even) {
+  background-color: var(--ligth-grey);
+}
+
+.vendor-table th {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: left;
+  background-color: var(--yellow-color);
+  color: var(--main-color);
+}
+
+.vendor-table tr:hover {
+  background-color: var(--table-hover-color);
+}
+
+.vendor-link {
+  text-decoration: none;
+  color: var(--blue-color);
+}
+
+.vendor-table .th-img {
+  text-align: center;
+  padding-top: 12px;
+}

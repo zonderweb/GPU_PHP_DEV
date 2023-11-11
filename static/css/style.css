@@ -124,126 +124,48 @@ h6 {
   letter-spacing: normal;
 }
 
-.header {
-  grid-area: header;
-  padding: 0 40px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+/* GPU Category */
+.wrap-category {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  margin-bottom: 20px;
+  margin-top: 30px;
 }
 
-.logo {
-  border-right: 1px solid rgba(0, 0, 0, 0.1);
-  padding-right: 40px;
-  margin-right: auto;
-}
-
-.logo-link {
-  font-size: 38px;
-  line-height: 3.37rem;
-  text-decoration: none;
-  font-weight: 800;
-  letter-spacing: -2px;
-  color: var(--main-color);
-}
-.logo-link span {
-  font-weight: 700;
-  line-height: 3.37rem;
-  font-size: 3rem;
-  color: var(--yellow-color);
-}
-
-.dev-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.left-category-side {
+  width: 60%;
+  padding: 10px;
   display: flex;
-  line-height: 3.37rem;
-}
-
-.menu-item,
-.login-item,
-.menu-link,
-.login-link {
-  font-weight: 600;
-  color: var(--main-color);
-}
-
-.menu-link,
-.login-link {
-  text-decoration: none;
-  padding: 0 10px;
-  display: block;
-}
-
-.menu-link:hover,
-.login-link:hover {
-  color: var(--green-color);
-}
-
-.login-menu {
-  border-left: 1px solid rgba(0, 0, 0, 0.1);
-  padding-left: 25px;
-}
-
-.header-menu {
-  padding-right: 25px;
-}
-
-.title {
-  font-size: 2rem;
-  line-height: 3.37rem;
-  margin-bottom: 10px;
-  font-weight: 800;
-  letter-spacing: -2px;
-}
-
-.footer {
-  grid-area: footer;
-  background: var(--main-color);
-  color: #fff;
-}
-
-.footer-container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 40px;
-  display: flex;
-  justify-content: start;
-}
-
-.footer-container * {
-  color: #fff;
-}
-
-.footer-section {
-  margin-right: 40px;
-}
-
-.flex-wrapper {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  height: 100%;
 }
-
-.err-title {
-  font-weight: 700;
-  font-size: 10rem;
-}
-
-.responsive-img {
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
-}
-
-/* GPU DB */
-.gpudb-img {
+.left-category-side .gpudb-img {
   margin-bottom: 20px;
   margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
   display: block;
+  max-width: 85%;
+}
+
+.rigth-category-side {
+  padding: 10px;
+}
+
+.category-item-info {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.875rem;
+  line-height: 1.3125rem;
+  font-weight: 400;
+}
+.category-item-info tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.category-item-info tr:hover {
+  background: rgba(231, 234, 243, 0.4);
+}
+.category-item-info td {
+  padding: 10px;
 }
 
 .spec-list {
@@ -372,6 +294,126 @@ h6 {
 .vendor-table .th-img {
   text-align: center;
   padding-top: 12px;
+}
+
+.header {
+  grid-area: header;
+  padding: 0 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  padding-right: 40px;
+  margin-right: auto;
+}
+
+.logo-link {
+  font-size: 38px;
+  line-height: 3.37rem;
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: -2px;
+  color: var(--main-color);
+}
+.logo-link span {
+  font-weight: 700;
+  line-height: 3.37rem;
+  font-size: 3rem;
+  color: var(--yellow-color);
+}
+
+.dev-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  line-height: 3.37rem;
+}
+
+.menu-item,
+.login-item,
+.menu-link,
+.login-link {
+  font-weight: 600;
+  color: var(--main-color);
+}
+
+.menu-link,
+.login-link {
+  text-decoration: none;
+  padding: 0 10px;
+  display: block;
+}
+
+.menu-link:hover,
+.login-link:hover {
+  color: var(--green-color);
+}
+
+.login-menu {
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  padding-left: 25px;
+}
+
+.header-menu {
+  padding-right: 25px;
+}
+
+.footer {
+  grid-area: footer;
+  background: var(--main-color);
+  color: #fff;
+}
+
+.footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px;
+  display: flex;
+  justify-content: start;
+}
+
+.footer-container * {
+  color: #fff;
+}
+
+.footer-section {
+  margin-right: 40px;
+}
+
+.title {
+  font-size: 2rem;
+  line-height: 3.37rem;
+  margin-bottom: 10px;
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+.title span {
+  font-weight: 300;
+  font-size: 1.875rem;
+  margin-right: 5px;
+}
+
+.flex-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.err-title {
+  font-weight: 700;
+  font-size: 10rem;
+}
+
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
 }
 
 .main-flex {
