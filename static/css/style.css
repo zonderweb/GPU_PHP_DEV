@@ -33,6 +33,7 @@ html {
 
 body {
   color: var(--main-color);
+  background: var(--white-color);
 }
 
 .grid-container {
@@ -67,11 +68,17 @@ h6 {
 .article-title {
   line-height: 2.625rem;
 }
+.article-title h2 {
+  font-weight: 800;
+  letter-spacing: -2px;
+  font-size: 32px;
+  line-height: 54px;
+}
 
 .article-row {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   margin-top: 20px;
 }
 
@@ -79,6 +86,20 @@ h6 {
   padding: 10px;
   display: flex;
   flex-direction: column;
+  width: 25%;
+}
+.article-item .vendor-label {
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+.article-item .vendor-label span {
+  padding-right: 5px;
 }
 .article-item div {
   margin-bottom: auto;

@@ -1,4 +1,5 @@
 <?php
+// ob_start(); // !?
 if (!getUser()) {
     header("Location: /login");
 }
