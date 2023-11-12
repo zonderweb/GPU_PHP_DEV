@@ -8,17 +8,13 @@
   <?php
   $out = '';
   $out .= '<div class="wrap-category">';
-
   $out .= '<div class="left-category-side">';
   $out .= '<img class="responsive-img gpudb-img" src="/static/images/vendor/' . $result['img'] . '">';
   $out .= '</div>';
-
   $out .= '<div class="rigth-category-side bg-gray b-radius-1">';
   $out .= '<h1 class="title"><span>Retail</span> ' . $result['title'] . '</h1>';
   $out .= '<div class="part-num"><span>Part Number: </span>' . $result['part-num'] . '</div>';
-
   $out .= '<table class="category-item-info">';
-
   $out .= '<tbody>';
   $out .= '<tr>';
   $out .= '<td class="bold">Vendor</td>';
@@ -70,31 +66,10 @@
   $out .= '<td>' . $result['other-change'] . '</td>';
   $out .= '</tr>';
   $out .= '</tbody>';
-
   $out .= '</table>';
-
   $out .= '</div>';
-
   $out .= '</div>';
   $out .= '<div class="content-gpudb">' . $result['description'] . '</div>';
-
-
-
-
-  // $out .= '<h1 class="title"><span>Retail:</span> ' . $result['title'] . '</h1>';
-  // $out .= '<div class="part-num">' . $result['part-num'] . '</div>';
-  // $out .= '<img class="responsive-img gpudb-img" src="/static/images/vendor/' . $result['img'] . '">';
-  // $out .= '<ul class="spec-list">';
-  // $out .= '<li>' . $result['graph-processor'] . '</li>';
-  // $out .= '<li>' . $result['cores'] . '</li>';
-  // $out .= '<li>' . $result['tmus'] . '</li>';
-  // $out .= '<li>' . $result['rops'] . '</li>';
-  // $out .= '<li>' . $result['memory-size'] . ' ' . 'gb' . '</li>';
-  // $out .= '<li>' . $result['memory-type'] . '</li>';
-  // $out .= '<li>' . $result['bus-width'] . ' ' . '<span>bit</span>' . '</li>';
-  // $out .= '</ul>';
-  // $out .= '<div>' . $result['description'] . '</div>';
-
   echo $out;
   ?>
 
