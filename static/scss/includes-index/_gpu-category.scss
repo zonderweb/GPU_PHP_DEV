@@ -24,7 +24,28 @@
 }
 
 .rigth-category-side {
-  padding: 10px;
+  padding: 15px 20px;
+}
+
+.title {
+  font-size: 2rem;
+  line-height: 3.37rem;
+  margin-bottom: 10px;
+  font-weight: 800;
+  letter-spacing: -2px;
+
+  span {
+    font-weight: 300;
+    font-size: 1.875rem;
+    margin-right: 5px;
+  }
+}
+
+.flex-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .category-item-info {
@@ -33,6 +54,7 @@
   font-size: .875rem;
   line-height: 1.3125rem;
   font-weight: 400;
+  margin-bottom: 20px;
 
   tr {
     border-bottom: 1px solid rgba(0, 0, 0, .1);
@@ -97,6 +119,13 @@
 .part-num {
   color: var(--link-color);
   text-transform: uppercase;
+  margin-bottom: 15px;
+
+  span {
+    text-transform: none;
+    margin-right: 5px;
+    color: var(--main-color);
+  }
 }
 
 .content-gpudb {
