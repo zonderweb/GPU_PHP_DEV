@@ -72,8 +72,24 @@ h6 {
   background: var(--bg-grey-table);
 }
 
+.c-red {
+  color: var(--red-color);
+}
+
+.c-yellow {
+  color: var(--yellow-color);
+}
+
+.f-right {
+  float: right;
+}
+
 .b-radius-1 {
   border-radius: 1rem;
+}
+
+.mar-left-5 {
+  margin-left: 5px;
 }
 
 .vendor-btn {

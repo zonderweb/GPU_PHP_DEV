@@ -55,7 +55,7 @@
   $out .= '</tbody>';
   $out .= '<tr>';
   $out .= '<td class="bold">Boost Clock</td>';
-  $out .= '<td>' . $result['boost-clock'] . ' Mhz</td>';
+  $out .= '<td>' . $result['boost-clock'] . ' Mhz' . ' ' . '<span class="c-red mar-left-5 percent">' . percent($result['gpu-clock'], $result['boost-clock']) . '</span></td>';
   $out .= '</tr>';
   $out .= '<tr>';
   $out .= '<td class="bold">Memory Clock</td>';

@@ -70,8 +70,24 @@ h6 {
   background: var(--bg-grey-table);
 }
 
+.c-red {
+  color: var(--red-color);
+}
+
+.c-yellow {
+  color: var(--yellow-color);
+}
+
+.f-right {
+  float: right;
+}
+
 .b-radius-1 {
   border-radius: 1rem;
+}
+
+.mar-left-5 {
+  margin-left: 5px;
 }
 
 .vendor-btn {
@@ -341,6 +357,11 @@ h6 {
 .vendor-table .th-img {
   text-align: center;
   padding-top: 12px;
+}
+
+.percent {
+  font-size: 0.75rem;
+  font-weight: 600;
 }
 
 .header {

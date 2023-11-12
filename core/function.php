@@ -324,3 +324,10 @@ function catMenu($classList, $subUrl, $tableName, $url, $title)
   }
   return "<ul class=" . $classList . ">$out</ul>";
 }
+
+function percent($base, $boost)
+{
+  $percent = (($boost - $base) / $boost) * 100;
+  $round = round($percent, 2);
+  return '+' . $round . '%';
+}
