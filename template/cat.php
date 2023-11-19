@@ -3,10 +3,14 @@
 <main class="main">
   <div class="cat-wrapper">
     <div class="cat-main-content">
-      <?php echo getCategoryData();
-      echo getMainData(); ?>
+      <?php
+      echo getMainData();
+      ?>
     </div>
     <div class="cat-sidebar">
+      <div class="sidebar-item">
+        <?php echo getCategoryData(); ?>
+      </div>
       <div class="sidebar-item">
         <h3 class="sidebar-title">Категорії</h3>
         <?php

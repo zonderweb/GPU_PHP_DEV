@@ -15,6 +15,7 @@
   --ligth-grey: #f8f8f8;
   --table-hover-color: #eaeaea;
   --white-color: #fff;
+  --btn-readmore-color: #efecec;
   --main-font: "Open Sans", sans-serif;
 }
 
@@ -429,6 +430,54 @@ h6 {
 
 .header-menu {
   padding-right: 25px;
+}
+
+.category-info-block {
+  margin-bottom: 40px;
+}
+
+.category-name {
+  font-size: 1.375rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.category-name span {
+  font-weight: 500;
+}
+
+.category-description {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.category-article-item {
+  margin-bottom: 75px;
+  margin-top: 20px;
+}
+
+.category-article-img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 20px auto;
+  display: block;
+}
+
+.category-article-descr_min {
+  margin-bottom: 20px;
+}
+
+.btn-read-more a {
+  color: var(--main-color);
+  padding: 10px 20px;
+  background: var(--btn-readmore-color);
+  font-size: 0.875rem;
+  font-weight: 400;
+  border-radius: 15px;
+  text-decoration: none;
+}
+.btn-read-more a:hover {
+  background: var(--main-color);
+  color: var(--white-color);
 }
 
 .cat-wrapper {

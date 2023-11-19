@@ -9,11 +9,11 @@ function getMainData()
     header('Location: /404.php');
   } else {
     for ($i = 0; $i < count($result); $i++) {
-      $out .= '<div class="column">';
-      $out .= '<img class="img-title" src="/static/images/' . $result[$i]['image'] . '" width=285>';
+      $out .= '<div class="category-article-item">';
+      $out .= '<img class="category-article-img" src="/static/images/' . $result[$i]['image'] . '">';
       $out .= '<h3 class="title title-main">' . $result[$i]['title'] . '</h3>';
-      $out .= '<p>' . $result[$i]['descr_min'] . '</p>';
-      $out .= '<div><a href="/article/' . $result[$i]['url'] . '">Читати далі</a></div>';
+      $out .= '<p class="category-article-descr_min">' . $result[$i]['descr_min'] . '</p>';
+      $out .= '<div class="btn-read-more"><a href="/article/' . $result[$i]['url'] . '">Читати далі</a></div>';
       $out .= '</div>';
     }
     return $out;
@@ -38,11 +38,10 @@ function getArticleFull()
 function getCategoryData()
 {
   global $cat;
-
   $out = '';
-  $out .= '<div class="row">';
-  $out .= '<h3><span>Категорія: </span>' . $cat['title'] . '</h3>';
-  $out .= '<div>' . $cat['description'] . '</div>';
+  $out .= '<div class="category-info-block">';
+  $out .= '<h3 class="category-name"><span>Категорія: </span>' . $cat['title'] . '</h3>';
+  $out .= '<div class="category-description">' . $cat['description'] . '</div>';
   $out .= '</div>';
   return $out;
 }
@@ -91,7 +90,7 @@ function getCategory($url, $table)
 
 function getCategoryArticle($cid, $table)
 {
-  $query = "SELECT * FROM " . $table . " WHERE cid='" . $cid . "'";
+  $query = "SELECT * FROM " . $table . " WHERE cid='" . $cid . "' ORDER BY id DESC";
   if (select($query) != NULL) return select($query);
 }
 
