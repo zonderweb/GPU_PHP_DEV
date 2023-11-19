@@ -1,9 +1,10 @@
 <footer class="footer">
   <div class="footer-container">
-    <div class="footer-section">
-      <h3>Категорії</h3>
-      <?php require_once 'template/include/_cat_menu.php'; ?>
-    </div>
+    <?php
+    if ($route[0] != 'cat') {
+      require_once 'template/include/_cat_menu.php';
+    }
+    ?>
     <div class="footer-section">
       <h3>dataBase GPU</h3>
       <?php echo catMenu('test', 'gpudb', 'gpucategory', 'url', 'title'); ?>

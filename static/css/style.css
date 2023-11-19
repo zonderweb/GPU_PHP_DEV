@@ -431,6 +431,47 @@ h6 {
   padding-right: 25px;
 }
 
+.cat-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.cat-main-content {
+  max-width: 80%;
+}
+
+.cat-sidebar {
+  padding: 20px;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  width: 400px;
+}
+
+.sidebar-title {
+  font-weight: 700;
+  letter-spacing: -1px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.sidebar-cat-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.sidebar-cat-menu li {
+  padding: 10px 5px 5px 5px;
+  color: var(--main-color);
+}
+.sidebar-cat-menu li a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+.sidebar-cat-menu li a:hover {
+  font-weight: 600;
+}
+
 .footer {
   grid-area: footer;
   background: var(--main-color);
@@ -451,6 +492,10 @@ h6 {
 
 .footer-section {
   margin-right: 40px;
+}
+.footer-section h3 {
+  font-weight: 700;
+  letter-spacing: -1px;
 }
 
 .err-title {
