@@ -1,0 +1,58 @@
+.article-main-content {
+  max-width: 75%;
+}
+
+.article-full {
+  p {
+    font-weight: 300;
+  }
+}
+
+.article-full-title {
+  margin-bottom: 30px;
+  margin-top: 15px;
+  line-height: 2.625rem;
+}
+
+.article-full-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #ddd;
+}
+
+.article-full-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.article-full-img-wrapper {
+  width: 40%;
+}
+
+.article-full-min_descr {
+  padding: 10px 10px 10px 30px;
+  width: 60%;
+
+  p {
+    font-weight: 600;
+  }
+}
+
+.article-full-text {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 700;
+    letter-spacing: -1px;
+  }
+
+  p {
+    padding: 5px;
+  }
+}

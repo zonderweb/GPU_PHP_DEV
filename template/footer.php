@@ -1,7 +1,7 @@
 <footer class="footer">
   <div class="footer-container">
     <?php
-    if ($route[0] != 'cat') {
+    if ($route[0] != 'cat' and $route[0] != 'article') {
       require_once 'template/include/_cat_menu.php';
     }
     ?>

@@ -24,12 +24,14 @@ function getMainData()
 function getArticleFull()
 {
   global $result;
-
   $out = '';
-  $out .= '<div class="row">';
-  $out .= '<h3>' . $result['title'] . '</h3>';
-  $out .= '<img class="img-title" src="/static/images/' . $result['image'] . '" width=380>';
-  $out .= '<div>' . $result['description'] . '</div>';
+  $out .= '<div class="article-full">';
+  $out .= '<h1 class="article-full-title">' . $result['title'] . '</h1>';
+  $out .= '<div class="article-full-header">';
+  $out .= '<div class="article-full-img-wrapper"><img class="article-full-img" src="/static/images/' . $result['image'] . '"></div>';
+  $out .= '<div class="article-full-min_descr"><p>' . $result['descr_min'] . '</p></div>';
+  $out .= '</div>';
+  $out .= '<div class="article-full-text">' . $result['description'] . '</div>';
   $out .= '</div>';
   return $out;
 }

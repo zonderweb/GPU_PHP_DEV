@@ -3,9 +3,7 @@
 <main class="main">
   <div class="cat-wrapper">
     <div class="cat-main-content">
-      <?php
-      echo getMainData();
-      ?>
+      <?php echo getMainData(); ?>
     </div>
     <div class="cat-sidebar">
       <div class="sidebar-item">
