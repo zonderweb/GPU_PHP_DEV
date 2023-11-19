@@ -7,11 +7,17 @@
       echo getMainData(); ?>
     </div>
     <div class="cat-sidebar">
-      <h3 class="sidebar-title">Категорії</h3>
-      <?php
-      // Виведення меню категорій
-      echo catMenu('sidebar-cat-menu', 'cat', 'category', 'url', 'title');
-      ?>
+      <div class="sidebar-item">
+        <h3 class="sidebar-title">Категорії</h3>
+        <?php
+        // Виведення меню категорій
+        echo catMenu('sidebar-cat-menu', 'cat', 'category', 'url', 'title');
+        ?>
+      </div>
+      <div class="sidebar-item">
+        <h3 class="sidebar-title mb-15">Останні плати</h3>
+        <?php require_once 'template/include/_sidebar_vendor.php' ?>
+      </div>
     </div>
   </div>
 </main>

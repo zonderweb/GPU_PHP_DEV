@@ -7,7 +7,7 @@
   <h1 class="title">GPU DataBase</h1>
   <?php require_once 'template/include/_main-founders-table.php' ?>
   <div class="article-title">
-    <h2>Останні відеоадаптери від вендорів</h2>
+    <h2>Відеоадаптери від вендорів</h2>
   </div>
   <div class="article-row">
     <?php
