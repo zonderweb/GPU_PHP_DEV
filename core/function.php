@@ -332,3 +332,44 @@ function percent($base, $boost)
   $round = round($percent, 2);
   return '+' . $round . '%';
 }
+
+// BREADCRUMBS
+
+function breadcrumbsCategoryName()
+{
+  global $route;
+  $queryCat = "SELECT * FROM gpucategory";
+  $resCat = select($queryCat);
+  $queryArticle = "SELECT * FROM gpuarticle";
+  $resArticle = select($queryArticle);
+
+  $cid = '';
+  for ($i = 0; $i < count($resArticle); $i++) {
+    if ($route[1] == $resArticle[$i]['url']) {
+      $cid = $resArticle[$i]['cid'];
+    }
+  }
+
+  $linkCat = '';
+  for ($i = 0; $i < count($resCat); $i++) {
+    if ($cid == $resCat[$i]['id']) {
+      $linkCat = '<a href="/gpudb/' . $resCat[$i]['url'] . '">' . $resCat[$i]['title'] . '</a>';
+    }
+  }
+
+  return $linkCat;
+}
+
+function breadcrumbsArticleName($tableName)
+{
+  global $route;
+  $query = "SELECT * FROM $tableName";
+  $res = select($query);
+  $out = '';
+  for ($i = 0; $i < count($res); $i++) {
+    if ($route[1] == $res[$i]['url']) {
+      $out .=  '<span>' . $res[$i]['title'] . '</span>';
+    }
+  }
+  return $out;
+}

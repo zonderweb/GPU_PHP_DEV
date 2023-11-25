@@ -5,6 +5,20 @@
 
 <main class="main">
 
+  <div class="breadcrumbs">
+    <ul class="breadcrumbs-items">
+      <li class="breadcrumbs-item">
+        <a href="/">Головна</a>
+      </li>
+      <li class="breadcrumbs-item">
+        <?php echo breadcrumbsCategoryName() ?>
+      </li>
+      <li class="breadcrumbs-item">
+        <?php echo breadcrumbsArticleName('gpuarticle') ?>
+      </li>
+    </ul>
+  </div>
+
   <?php
   $out = '';
   $out .= '<div class="wrap-category">';
