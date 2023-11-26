@@ -3,6 +3,21 @@
 <!-- GPUDB CATEGORY -->
 
 <main class="main">
+
+  <!-- BREADCRUMBS -->
+
+  <div class="breadcrumbs">
+    <ul class="breadcrumbs-items">
+      <li class="breadcrumbs-item">
+        <a href="/">Головна</a>
+        <span class="material-symbols-outlined">navigate_next</span>
+      </li>
+      <li class="breadcrumbs-item">
+        <?php echo breadcrumbsArticleName('gpucategory') ?>
+      </li>
+    </ul>
+  </div>
+
   <?php
   $out = '';
   $out .= '<div class="wrap-category">';
