@@ -283,9 +283,10 @@ function createCategoryGpu(
   $memoryType,
   $busWidth,
   $description,
-  $image
+  $image,
+  $date
 ) {
-  $query = "INSERT INTO gpucategory (title, url, found, `graph-processor`, cores, tmus, rops, `memory-size`, `memory-type`, `bus-width`, description, img) VALUES ('" . $title . "', '" . $url . "', '" . $found . "' , '" . $graphProc . "', " . $cores . ", " . $tmus . ", " . $rops . ", " . $memorySize . ", '" .  $memoryType . "', " . $busWidth . ", '" . $description . "', '" . $image . "')";
+  $query = "INSERT INTO gpucategory (title, url, found, `graph-processor`, cores, tmus, rops, `memory-size`, `memory-type`, `bus-width`, description, img, date) VALUES ('" . $title . "', '" . $url . "', '" . $found . "' , '" . $graphProc . "', " . $cores . ", " . $tmus . ", " . $rops . ", " . $memorySize . ", '" .  $memoryType . "', " . $busWidth . ", '" . $description . "', '" . $image . "', '" . $date . "')";
   return execQuery($query);
 }
 
@@ -302,9 +303,10 @@ function updateCategoryGpu(
   $busWidth,
   $description,
   $image,
-  $id
+  $id,
+  $date
 ) {
-  $query = "UPDATE gpucategory SET title = '" . $title . "', url = '" . $url . "', found = '" . $found . "', `graph-processor` = '" . $graphProc . "', cores = " . $cores . ", tmus = " . $tmus . ", rops = " . $rops . ", `memory-size` = " . $memorySize . ", `memory-type` = '" . $memoryType . "', `bus-width` = " . $busWidth . ", description = '" . $description . "', img = '" . $image . "' WHERE id = " . $id;
+  $query = "UPDATE gpucategory SET title = '" . $title . "', url = '" . $url . "', found = '" . $found . "', `graph-processor` = '" . $graphProc . "', cores = " . $cores . ", tmus = " . $tmus . ", rops = " . $rops . ", `memory-size` = " . $memorySize . ", `memory-type` = '" . $memoryType . "', `bus-width` = " . $busWidth . ", description = '" . $description . "', img = '" . $image . "', date = '" . $date . "' WHERE id = " . $id;
   return execQuery($query);
 }
 

@@ -4,6 +4,7 @@
       <p>Title: <input type="text" name="title" value="<?php if (isset($result['title'])) echo $result['title']; ?>"></p>
       <p>URL: <input type="text" name="url" value="<?php if (isset($result['url'])) echo $result['url']; ?>"></p>
       <p>Founders: <input type="text" name="found" value="<?php if (isset($result['found'])) echo $result['found']; ?>"></p>
+      <p>Relese Date for exem. 01-01-2020: <input type="text" name="date" value="<?php if (isset($result['date'])) echo $result['date']; ?>"></p>
       <p>Графічний чіп: <input type="text" name="graph-processor" value="<?php if (isset($result['graph-processor'])) echo $result['graph-processor']; ?>"></p>
       <p>К-сть ядер:<br> <input type="number" name="cores" value="<?php if (isset($result['cores'])) echo $result['cores']; ?>"></p>
       <p>TMUS:<br> <input type="number" name="tmus" value="<?php if (isset($result['tmus'])) echo $result['tmus']; ?>"></p>

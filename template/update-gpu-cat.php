@@ -23,6 +23,7 @@ if (isset($_POST['submit'])) {
   }
 
   $id = $route[2];
+  $date = trim($_POST['date']);
 
   $update = updateCategoryGpu(
     $title,
@@ -37,7 +38,8 @@ if (isset($_POST['submit'])) {
     $busWidth,
     $description,
     $image,
-    $id
+    $id,
+    $date
   );
 
   if ($update) {

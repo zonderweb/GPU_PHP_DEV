@@ -17,6 +17,7 @@ if (isset($_POST['submit'])) {
 
   move_uploaded_file($_FILES['image']['tmp_name'], 'static/images/gpucat/' . $_FILES['image']['name']);
   $image = $_FILES['image']['name'];
+  $date = trim($_POST['date']);
 
   $create = createCategoryGpu(
     $title,
@@ -30,7 +31,8 @@ if (isset($_POST['submit'])) {
     $memoryType,
     $busWidth,
     $description,
-    $image
+    $image,
+    $date
   );
 
   if ($create) {
@@ -58,6 +60,7 @@ if (isset($_POST['submit'])) {
     "bus-width" => "",
     "description" => "",
     "img" => "",
+    "date" => "",
   );
 }
 require_once 'include/_category_gpu_form.php';
