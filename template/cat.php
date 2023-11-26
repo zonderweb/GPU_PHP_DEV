@@ -1,6 +1,20 @@
 <?php require_once 'template/header.php'; ?>
 <!-- CATEGORY PAGE TEMPLATE -->
 <main class="main">
+
+  <!-- BREADCRUMBS -->
+  <div class="breadcrumbs">
+    <ul class="breadcrumbs-items">
+      <li class="breadcrumbs-item">
+        <a href="/">Головна</a>
+        <span class="material-symbols-outlined">navigate_next</span>
+      </li>
+      <li class="breadcrumbs-item">
+        <?php echo breadcrumbsArticleName('category') ?>
+      </li>
+    </ul>
+  </div>
+
   <div class="cat-wrapper">
     <div class="cat-main-content">
       <?php echo getMainData(); ?>

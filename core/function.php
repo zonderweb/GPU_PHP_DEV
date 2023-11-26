@@ -356,7 +356,6 @@ function breadcrumbsCategoryName()
       $linkCat = '<a href="/gpudb/' . $resCat[$i]['url'] . '">' . $resCat[$i]['title'] . '</a>';
     }
   }
-
   return $linkCat;
 }
 
