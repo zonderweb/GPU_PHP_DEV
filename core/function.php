@@ -335,12 +335,12 @@ function percent($base, $boost)
 
 // BREADCRUMBS
 
-function breadcrumbsCategoryName()
+function breadcrumbsCategoryName($tableCat, $tableArticle, $linkRoute)
 {
   global $route;
-  $queryCat = "SELECT * FROM gpucategory";
+  $queryCat = "SELECT * FROM $tableCat";
   $resCat = select($queryCat);
-  $queryArticle = "SELECT * FROM gpuarticle";
+  $queryArticle = "SELECT * FROM $tableArticle";
   $resArticle = select($queryArticle);
 
   $cid = '';
@@ -353,7 +353,7 @@ function breadcrumbsCategoryName()
   $linkCat = '';
   for ($i = 0; $i < count($resCat); $i++) {
     if ($cid == $resCat[$i]['id']) {
-      $linkCat = '<a href="/gpudb/' . $resCat[$i]['url'] . '">' . $resCat[$i]['title'] . '</a>';
+      $linkCat = '<a href="/' . $linkRoute . '/' . $resCat[$i]['url'] . '">' . $resCat[$i]['title'] . '</a>';
     }
   }
   return $linkCat;
@@ -362,7 +362,7 @@ function breadcrumbsCategoryName()
 function breadcrumbsArticleName($tableName)
 {
   global $route;
-  $query = "SELECT * FROM $tableName";
+  $query = "SELECT url, title FROM $tableName";
   $res = select($query);
   $out = '';
   for ($i = 0; $i < count($res); $i++) {

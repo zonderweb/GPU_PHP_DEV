@@ -2,6 +2,24 @@
 <?php require_once 'template/header.php'; ?>
 
 <main class="main">
+
+  <!-- BREADCRUMBS -->
+  <div class="breadcrumbs">
+    <ul class="breadcrumbs-items">
+      <li class="breadcrumbs-item">
+        <a href="/">Головна</a>
+        <span class="material-symbols-outlined">navigate_next</span>
+      </li>
+      <li class="breadcrumbs-item breadcrumbs-category">
+        <?php echo breadcrumbsCategoryName('category', 'info', 'cat') ?>
+        <span class="material-symbols-outlined">navigate_next</span>
+      </li>
+      <li class="breadcrumbs-item">
+        <?php echo breadcrumbsArticleName('info') ?>
+      </li>
+    </ul>
+  </div>
+
   <div class="cat-wrapper">
     <div class="article-main-content">
       <?php echo getArticleFull(); ?>

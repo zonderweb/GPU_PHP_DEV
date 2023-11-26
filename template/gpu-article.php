@@ -4,7 +4,7 @@
 ВИВЕДЕННЯ ПОВНОГО МАТЕРІАЛУ VENDOR -->
 
 <main class="main">
-
+  <!-- BREADCRUMBS -->
   <div class="breadcrumbs">
     <ul class="breadcrumbs-items">
       <li class="breadcrumbs-item">
@@ -12,7 +12,7 @@
         <span class="material-symbols-outlined">navigate_next</span>
       </li>
       <li class="breadcrumbs-item breadcrumbs-category">
-        <?php echo breadcrumbsCategoryName() ?>
+        <?php echo breadcrumbsCategoryName('gpucategory', 'gpuarticle', 'gpudb') ?>
         <span class="material-symbols-outlined">navigate_next</span>
       </li>
       <li class="breadcrumbs-item">
