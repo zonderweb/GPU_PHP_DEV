@@ -29,8 +29,6 @@
   }
 }
 
-
-
 .dev-list {
   margin: 0;
   padding: 0;
@@ -43,8 +41,14 @@
 .login-item,
 .menu-link,
 .login-link {
-  font-weight: 600;
-  color: var(--main-color);
+  font-weight: 700;
+  color: rgba(0, 0, 0, .7);
+  font-size: .875rem;
+}
+
+.login-item {
+  display: flex;
+  align-items: center;
 }
 
 .menu-link,
@@ -56,7 +60,7 @@
 
 .menu-link:hover,
 .login-link:hover {
-  color: var(--green-color);
+  color: rgb(0, 0, 0);
 }
 
 .login-menu {

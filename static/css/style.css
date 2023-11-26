@@ -412,8 +412,14 @@ h6 {
 .login-item,
 .menu-link,
 .login-link {
-  font-weight: 600;
-  color: var(--main-color);
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 0.875rem;
+}
+
+.login-item {
+  display: flex;
+  align-items: center;
 }
 
 .menu-link,
@@ -425,7 +431,7 @@ h6 {
 
 .menu-link:hover,
 .login-link:hover {
-  color: var(--green-color);
+  color: rgb(0, 0, 0);
 }
 
 .login-menu {
@@ -446,8 +452,8 @@ h6 {
 }
 .breadcrumbs-items .breadcrumbs-item {
   margin-left: 5px;
-  font-size: 14px;
-  line-height: 21px;
+  font-size: 0.875rem;
+  line-height: 1.3125rem;
   font-weight: 400;
   padding: 5px 10px;
   display: flex;

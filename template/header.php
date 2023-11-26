@@ -29,6 +29,9 @@
       <div class="login-menu">
         <ul class="login-list dev-list">
           <li class="login-item">
+            <span class="material-symbols-outlined">account_circle</span>
+          </li>
+          <li class="login-item">
             <a href="/login" class="login-link">Вхід</a>
           </li>
           <li class="login-item">
