@@ -1,0 +1,34 @@
+.breadcrumbs-items {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+
+  .breadcrumbs-item {
+    margin-left: 5px;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    padding: 5px 10px;
+    display: flex;
+
+    span {
+      margin-left: 5px;
+    }
+
+    a {
+      color: var(--main-color);
+      text-decoration: none;
+    }
+  }
+
+  .breadcrumbs-category {
+    background: #f5f5f5;
+    border-radius: 7px;
+
+    &:hover {
+      background: #e8e8e8;
+    }
+  }
+}

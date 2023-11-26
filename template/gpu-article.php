@@ -9,9 +9,11 @@
     <ul class="breadcrumbs-items">
       <li class="breadcrumbs-item">
         <a href="/">Головна</a>
+        <span class="material-symbols-outlined">navigate_next</span>
       </li>
-      <li class="breadcrumbs-item">
+      <li class="breadcrumbs-item breadcrumbs-category">
         <?php echo breadcrumbsCategoryName() ?>
+        <span class="material-symbols-outlined">navigate_next</span>
       </li>
       <li class="breadcrumbs-item">
         <?php echo breadcrumbsArticleName('gpuarticle') ?>
