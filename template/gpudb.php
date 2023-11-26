@@ -29,6 +29,10 @@
   $out .= '<table class="category-item-info">';
   $out .= '<tbody>';
   $out .= '<tr>';
+  $out .= '<td class="bold">Дата релізу</td>';
+  $out .= '<td>' . $gpudb['date'] . '</td>';
+  $out .= '</tr>';
+  $out .= '<tr>';
   $out .= '<td class="bold">Графічний Чіп</td>';
   $out .= '<td>' . $gpudb['graph-processor'] . '</td>';
   $out .= '</tr>';
