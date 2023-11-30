@@ -5,7 +5,7 @@ if (!getUser()) {
 }
 if (@$route[1] == '') $title = '<span class="material-symbols-outlined">dashboard</span>' . 'Dashboard';
 if (@$route[1] == 'blog-part') $title = '<span class="material-symbols-outlined">article</span>' . 'Блогова Частина';
-if (@$route[1] == 'db-gpu') $title = '<span class="material-symbols-outlined">developer_board</span>' . 'База Вендорів Відеокарт';
+if (@$route[1] == 'db-gpu')  $title = '<span class="material-symbols-outlined">developer_board</span>' . 'База Вендорів Відеокарт';
 if (@$route[1] == 'gpu-create') $title = '<span class="material-symbols-outlined">draw</span>' . 'Створити новий запис в "Базі Вендорів Відеокарт"';
 if (@$route[1] == 'create') $title = '<span class="material-symbols-outlined">draw</span>' . 'Створити новий матеріал в основних категоріях';
 if (@$route[1] == 'gpu-update' or @$route[1] == 'update') $title = '<span class="material-symbols-outlined">edit_square</span>' . 'Редагувати матеріал';
@@ -87,14 +87,21 @@ if (@$route[1] == 'update-gpu-cat') $title = '<span class="material-symbols-outl
         </div>
         <header class="admin-header">
             <div class="header-top">
-                <h1 class="title title-h1">Адміністративна панель</h1>
+                <h1 class="title title-h1 title-admin"><span class="material-symbols-outlined">admin_panel_settings</span>admin</h1>
                 <a class="logout" href="/logout">Вихід <span class="material-symbols-outlined">logout</span></a>
             </div>
             <div class="header-bottom">
                 <div class="header-container">
-                    <h2 class="admin-subtitle">
-                        <?php echo $title; ?>
-                    </h2>
+                    <div class="header-info">
+                        <h2 class="admin-subtitle">
+                            <?php echo $title; ?>
+                        </h2>
+                        <?php if (@$route[1] == 'db-gpu') {
+                            echo '<div class="btn-create">
+                        <a href="/admin/gpu-create"><span class="material-symbols-outlined">add</span>Створити</a>
+                    </div>';
+                        } ?>
+                    </div>
                 </div>
             </div>
         </header>
