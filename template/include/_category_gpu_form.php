@@ -12,6 +12,7 @@
       <p>Memory Size (GB):<br> <input type="number" name="memory-size" value="<?php if (isset($result['memory-size'])) echo $result['memory-size']; ?>"></p>
       <p>Memory type: <input type="text" name="memory-type" value="<?php if (isset($result['memory-type'])) echo $result['memory-type']; ?>"></p>
       <p>Bus Width (bit):<br> <input type="number" name="bus-width" value="<?php if (isset($result['bus-width'])) echo $result['bus-width']; ?>"></p>
+      <p>TDP (W):<br> <input type="number" name="tdp" value="<?php if (isset($result['tdp'])) echo $result['tdp']; ?>"></p>
       <p>Description: <textarea name="description"><?php if (isset($result['description'])) echo $result['description']; ?></textarea>
       </p>
       <p>Upload photo:<br> <input class="upl-img" type="file" name="image"></p>

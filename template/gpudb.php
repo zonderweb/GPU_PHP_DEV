@@ -34,7 +34,7 @@
   $out .= '</tr>';
   $out .= '<tr>';
   $out .= '<td class="bold">Графічний Чіп</td>';
-  $out .= '<td>' . $gpudb['graph-processor'] . '</td>';
+  $out .= '<td class="text-up">' . $gpudb['graph-processor'] . '</td>';
   $out .= '</tr>';
   $out .= '<tr>';
   $out .= '<td class="bold">К-сть Ядер</td>';
@@ -54,11 +54,15 @@
   $out .= '</tr>';
   $out .= '<tr>';
   $out .= '<td class="bold">Тип памʼяті</td>';
-  $out .= '<td>' . $gpudb['memory-type'] . '</td>';
+  $out .= '<td class="text-up">' . $gpudb['memory-type'] . '</td>';
   $out .= '</tr>';
   $out .= '<tr>';
   $out .= '<td class="bold">Ширина шини</td>';
   $out .= '<td>' . $gpudb['bus-width'] . ' bit</td>';
+  $out .= '</tr>';
+  $out .= '<tr>';
+  $out .= '<td class="bold">TDP</td>';
+  $out .= '<td>' . $gpudb['tdp'] . ' W</td>';
   $out .= '</tr>';
   $out .= '</tbody>';
   $out .= '</table>';

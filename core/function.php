@@ -265,8 +265,15 @@ function updateArticleGpu(
   return execQuery($query);
 }
 
-function updateArticle($id, $title, $url, $descr_min, $description, $cid, $image)
-{
+function updateArticle(
+  $id,
+  $title,
+  $url,
+  $descr_min,
+  $description,
+  $cid,
+  $image
+) {
   $query = "UPDATE info SET title = '" . $title . "', url = '" . $url . "', descr_min = '" . $descr_min . "', description = '" . $description . "', cid = " . $cid . ", image = '" . $image . "' WHERE id = " . $id;
   return execQuery($query);
 }
@@ -284,9 +291,10 @@ function createCategoryGpu(
   $busWidth,
   $description,
   $image,
-  $date
+  $date,
+  $tdp
 ) {
-  $query = "INSERT INTO gpucategory (title, url, found, `graph-processor`, cores, tmus, rops, `memory-size`, `memory-type`, `bus-width`, description, img, date) VALUES ('" . $title . "', '" . $url . "', '" . $found . "' , '" . $graphProc . "', " . $cores . ", " . $tmus . ", " . $rops . ", " . $memorySize . ", '" .  $memoryType . "', " . $busWidth . ", '" . $description . "', '" . $image . "', '" . $date . "')";
+  $query = "INSERT INTO gpucategory (title, url, found, `graph-processor`, cores, tmus, rops, `memory-size`, `memory-type`, `bus-width`, description, img, date, tdp) VALUES ('" . $title . "', '" . $url . "', '" . $found . "' , '" . $graphProc . "', " . $cores . ", " . $tmus . ", " . $rops . ", " . $memorySize . ", '" .  $memoryType . "', " . $busWidth . ", '" . $description . "', '" . $image . "', '" . $date . "', " . $tdp . ")";
   return execQuery($query);
 }
 
