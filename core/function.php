@@ -292,9 +292,10 @@ function createCategoryGpu(
   $description,
   $image,
   $date,
-  $tdp
+  $tdp,
+  $psu
 ) {
-  $query = "INSERT INTO gpucategory (title, url, found, `graph-processor`, cores, tmus, rops, `memory-size`, `memory-type`, `bus-width`, description, img, date, tdp) VALUES ('" . $title . "', '" . $url . "', '" . $found . "' , '" . $graphProc . "', " . $cores . ", " . $tmus . ", " . $rops . ", " . $memorySize . ", '" .  $memoryType . "', " . $busWidth . ", '" . $description . "', '" . $image . "', '" . $date . "', " . $tdp . ")";
+  $query = "INSERT INTO gpucategory (title, url, found, `graph-processor`, cores, tmus, rops, `memory-size`, `memory-type`, `bus-width`, description, img, date, tdp, psu) VALUES ('" . $title . "', '" . $url . "', '" . $found . "' , '" . $graphProc . "', " . $cores . ", " . $tmus . ", " . $rops . ", " . $memorySize . ", '" .  $memoryType . "', " . $busWidth . ", '" . $description . "', '" . $image . "', '" . $date . "', " . $tdp . ", " . $psu . ")";
   return execQuery($query);
 }
 

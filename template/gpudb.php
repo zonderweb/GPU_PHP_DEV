@@ -64,6 +64,10 @@
   $out .= '<td class="bold">TDP</td>';
   $out .= '<td>' . $gpudb['tdp'] . ' W</td>';
   $out .= '</tr>';
+  $out .= '<tr>';
+  $out .= '<td class="bold">Suggested PSU</td>';
+  $out .= '<td>' . $gpudb['psu'] . ' W</td>';
+  $out .= '</tr>';
   $out .= '</tbody>';
   $out .= '</table>';
   $out .= '</div>';

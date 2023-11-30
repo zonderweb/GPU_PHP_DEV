@@ -19,6 +19,7 @@ if (isset($_POST['submit'])) {
   $image = $_FILES['image']['name'];
   $date = trim($_POST['date']);
   $tdp = $_POST['tdp'];
+  $psu = $_POST['psu'];
 
   $create = createCategoryGpu(
     $title,
@@ -34,7 +35,8 @@ if (isset($_POST['submit'])) {
     $description,
     $image,
     $date,
-    $tdp
+    $tdp,
+    $psu
   );
 
   if ($create) {
@@ -64,6 +66,7 @@ if (isset($_POST['submit'])) {
     "img" => "",
     "date" => "",
     "tdp" => "",
+    "psu" => ""
   );
 }
 require_once 'include/_category_gpu_form.php';
