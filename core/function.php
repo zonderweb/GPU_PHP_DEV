@@ -313,9 +313,11 @@ function updateCategoryGpu(
   $description,
   $image,
   $id,
-  $date
+  $date,
+  $tdp,
+  $psu
 ) {
-  $query = "UPDATE gpucategory SET title = '" . $title . "', url = '" . $url . "', found = '" . $found . "', `graph-processor` = '" . $graphProc . "', cores = " . $cores . ", tmus = " . $tmus . ", rops = " . $rops . ", `memory-size` = " . $memorySize . ", `memory-type` = '" . $memoryType . "', `bus-width` = " . $busWidth . ", description = '" . $description . "', img = '" . $image . "', date = '" . $date . "' WHERE id = " . $id;
+  $query = "UPDATE gpucategory SET title = '" . $title . "', url = '" . $url . "', found = '" . $found . "', `graph-processor` = '" . $graphProc . "', cores = " . $cores . ", tmus = " . $tmus . ", rops = " . $rops . ", `memory-size` = " . $memorySize . ", `memory-type` = '" . $memoryType . "', `bus-width` = " . $busWidth . ", description = '" . $description . "', img = '" . $image . "', date = '" . $date . "', tdp = " . $tdp . ", psu = " . $psu . "   WHERE id = " . $id;
   return execQuery($query);
 }
 

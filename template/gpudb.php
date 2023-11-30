@@ -1,11 +1,7 @@
 <?php require_once 'template/header.php'; ?>
-
 <!-- GPUDB CATEGORY -->
-
 <main class="main">
-
   <!-- BREADCRUMBS -->
-
   <div class="breadcrumbs">
     <ul class="breadcrumbs-items">
       <li class="breadcrumbs-item">
