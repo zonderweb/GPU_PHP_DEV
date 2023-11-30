@@ -30,6 +30,8 @@ if (isset($_POST['submit'])) {
   }
 
   $id = $route[2];
+  $tdp = $_POST['tdp'];
+  $psu = $_POST['psu'];
 
   $update = updateArticleGpu(
     $id,
@@ -50,7 +52,9 @@ if (isset($_POST['submit'])) {
     $memType,
     $busW,
     $otherChange,
-    $image
+    $image,
+    $tdp,
+    $psu
   );
 
 

@@ -24,6 +24,8 @@ if (isset($_POST['submit'])) {
 
   move_uploaded_file($_FILES['image']['tmp_name'], 'static/images/vendor/' . $_FILES['image']['name']);
   $image = $_FILES['image']['name'];
+  $tdp = $_POST['tdp'];
+  $psu = $_POST['psu'];
 
   $create = createArticleGpu(
     $title,
@@ -43,7 +45,9 @@ if (isset($_POST['submit'])) {
     $memType,
     $busW,
     $otherChange,
-    $image
+    $image,
+    $tdp,
+    $psu
   );
   if ($create) {
     header('Location: /admin/db-gpu');
@@ -76,6 +80,8 @@ if (isset($_POST['submit'])) {
     "bus-width" => "",
     "other-change" => "",
     "img" => "",
+    "tdp" => "",
+    "psu" => ""
   );
 }
 

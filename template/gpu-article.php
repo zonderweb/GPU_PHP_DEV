@@ -81,6 +81,13 @@
   $out .= '<td class="bold">Особливості</td>';
   $out .= '<td>' . $result['other-change'] . '</td>';
   $out .= '</tr>';
+  $out .= '<td class="bold">TDP</td>';
+  $out .= '<td>' . $result['tdp'] . ' W</td>';
+  $out .= '</tr>';
+  $out .= '<tr>';
+  $out .= '<td class="bold">Suggested PSU</td>';
+  $out .= '<td>' . $result['psu'] . ' W</td>';
+  $out .= '</tr>';
   $out .= '</tbody>';
   $out .= '</table>';
   $out .= '</div>';

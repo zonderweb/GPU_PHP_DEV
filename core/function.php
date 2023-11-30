@@ -233,9 +233,11 @@ function createArticleGpu(
   $memType,
   $busW,
   $otherChange,
-  $image
+  $image,
+  $tdp,
+  $psu
 ) {
-  $query = "INSERT INTO gpuarticle (title, url, `part-num`, description, cid, vendor, `gpu-clock`, `boost-clock`, `memory-clock`, `graph-processor`, cores, tmus, rops, `memory-size`, `memory-type`, `bus-width`, `other-change`, img) VALUES ('" . $title . "', '" . $url . "', '" . $partNum . "' , '" . $description . "', " . $cid . ", '" . $vendor . "', " . $gpuClock . ", " . $boostClock . ", " .  $memoryClock . ", '" . $graphPrc . "', " . $cores . ", " . $tmus . ", " . $rops . ", " . $memSize . ", '" .  $memType . "', " . $busW . ", '" . $otherChange . "', '" . $image . "')";
+  $query = "INSERT INTO gpuarticle (title, url, `part-num`, description, cid, vendor, `gpu-clock`, `boost-clock`, `memory-clock`, `graph-processor`, cores, tmus, rops, `memory-size`, `memory-type`, `bus-width`, `other-change`, img, tdp, psu) VALUES ('" . $title . "', '" . $url . "', '" . $partNum . "' , '" . $description . "', " . $cid . ", '" . $vendor . "', " . $gpuClock . ", " . $boostClock . ", " .  $memoryClock . ", '" . $graphPrc . "', " . $cores . ", " . $tmus . ", " . $rops . ", " . $memSize . ", '" .  $memType . "', " . $busW . ", '" . $otherChange . "', '" . $image . "', " . $tdp . ", " . $psu . ")";
 
   return execQuery($query);
 }
@@ -259,9 +261,11 @@ function updateArticleGpu(
   $memType,
   $busW,
   $otherChange,
-  $image
+  $image,
+  $tdp,
+  $psu
 ) {
-  $query = "UPDATE gpuarticle SET title = '" . $title . "', url = '" . $url . "', `part-num` = '" . $partNum . "', description = '" . $description . "', cid = " . $cid . ", vendor = '" . $vendor . "', `gpu-clock` = " . $gpuClock . ", `boost-clock` = " . $boostClock . ", `memory-clock` = " .  $memoryClock . ", `graph-processor` = '" . $graphPrc . "', cores = " . $cores . ", tmus = " . $tmus . ", rops = " . $rops . ", `memory-size` = " . $memSize . ", `memory-type` = '" .  $memType . "', `bus-width` = " . $busW . ", `other-change` = '" . $otherChange . "', img = '" . $image . "' WHERE id = " . $id;
+  $query = "UPDATE gpuarticle SET title = '" . $title . "', url = '" . $url . "', `part-num` = '" . $partNum . "', description = '" . $description . "', cid = " . $cid . ", vendor = '" . $vendor . "', `gpu-clock` = " . $gpuClock . ", `boost-clock` = " . $boostClock . ", `memory-clock` = " .  $memoryClock . ", `graph-processor` = '" . $graphPrc . "', cores = " . $cores . ", tmus = " . $tmus . ", rops = " . $rops . ", `memory-size` = " . $memSize . ", `memory-type` = '" .  $memType . "', `bus-width` = " . $busW . ", `other-change` = '" . $otherChange . "', img = '" . $image . "', tdp = " . $tdp . ", psu = " . $psu . " WHERE id = " . $id;
   return execQuery($query);
 }
 
