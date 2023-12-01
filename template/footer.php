@@ -7,12 +7,15 @@
     ?>
     <div class="footer-section">
       <h3>dataBase GPU</h3>
-      <?php echo catMenu('test', 'gpudb', 'gpucategory', 'url', 'title'); ?>
+      <ul class="test">
+        <?php echo catMenu('gpudb', 'gpucategory', 'url', 'title'); ?>
+      </ul>
     </div>
   </div>
 </footer>
 </div>
 
+<script src="/static/js/script.js"></script>
 </body>
 
 </html>

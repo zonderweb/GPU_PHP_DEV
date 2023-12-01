@@ -332,7 +332,7 @@ function logout()
   exit;
 }
 
-function catMenu($classList, $subUrl, $tableName, $url, $title)
+function catMenu($subUrl, $tableName, $url, $title)
 {
   $query = "SELECT * FROM $tableName";
   $result = select($query);
@@ -340,7 +340,7 @@ function catMenu($classList, $subUrl, $tableName, $url, $title)
   for ($i = 0; $i < count($result); $i++) {
     $out .= '<li><a href="/' . $subUrl . '/' . $result[$i][$url] . '">' . $result[$i][$title] . '</a></li>';
   }
-  return "<ul class=" . $classList . ">$out</ul>";
+  return $out;
 }
 
 function percent($base, $boost)

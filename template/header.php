@@ -19,10 +19,15 @@
       </div>
 
       <div class="header-menu">
-        <ul class="menu-list dev-list">
-          <li class="menu-item">
-            <a href="/admin" class="menu-link" target="_blank">Admin</a>
+        <ul class="root-nav">
+          <li><a href="/">Головна</a></li>
+          <li>
+            <span class="drop-item-menu">База Данних</span>
+            <ul class="root-nav-submenu">
+              <?php echo catMenu('gpudb', 'gpucategory', 'url', 'title') ?>
+            </ul>
           </li>
+          <?php echo CatMenu('cat', 'category', 'url', 'title'); ?>
         </ul>
       </div>
 

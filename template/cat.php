@@ -25,10 +25,12 @@
       </div>
       <div class="sidebar-item">
         <h3 class="sidebar-title">Категорії</h3>
-        <?php
-        // Виведення меню категорій
-        echo catMenu('sidebar-cat-menu', 'cat', 'category', 'url', 'title');
-        ?>
+        <ul class="sidebar-cat-menu">
+          <?php
+          // Виведення меню категорій
+          echo catMenu('cat', 'category', 'url', 'title');
+          ?>
+        </ul>
       </div>
       <div class="sidebar-item">
         <h3 class="sidebar-title mb-15">Останні плати</h3>
