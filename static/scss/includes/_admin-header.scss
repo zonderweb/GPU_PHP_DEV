@@ -6,10 +6,10 @@
   background: var(--white-color);
 }
 
-.header-container {
-  margin: 0 auto;
-  max-width: 1280px;
-}
+// .header-container {
+//   // margin: 0 auto;
+//   // max-width: 1280px;
+// }
 
 .header-top {
   padding-left: 50px;
@@ -56,10 +56,9 @@
   font-size: 1.5rem;
   line-height: 2.375rem;
   font-weight: 700;
-  letter-spacing: -1px;
-  text-transform: uppercase;
   display: flex;
   align-items: center;
+  text-transform: uppercase;
 
   span {
     color: var(--green-icon-color);
@@ -88,10 +87,12 @@
     display: flex;
     align-items: center;
     padding: 7px 20px;
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 14px;
 
     span {
       margin-right: 5px;
+      font-size: 28px;
     }
   }
 }

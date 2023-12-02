@@ -1,7 +1,7 @@
 <!-- 
   ADMIN INDEX TEMPLATE 
 -->
-<div class="admin-article-wrapper">
+<div class="admin-article-wrapper main-container">
   <div class="statistic">
     <div class="static-item">
       <h3 class="title-staistic">

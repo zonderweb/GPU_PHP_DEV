@@ -1,0 +1,67 @@
+.admin-vendors-data {
+  background: var(--white-color);
+}
+
+.vendors-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 10px;
+}
+
+.vendors-header-style {
+  background-color: var(--grey-header-color);
+  height: 50px;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-header-vendors-color);
+  font-weight: 600;
+  font-size: .8125rem;
+  line-height: 1.25rem;
+}
+
+.vendors-data-list-style {
+  background-color: var(--white-color);
+  border-bottom: 1px solid #E2E8F0;
+  color: var(--text-row-color);
+  font-size: .875rem;
+  line-height: 1.3125rem;
+  height: 65px;
+}
+
+.vendor-pic {
+  img {
+    max-width: 70px;
+    height: auto;
+  }
+}
+
+.btn-edit-data-item {
+  a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--btn-fiolet-color);
+  }
+}
+
+.p-number {
+  font-size: .75rem;
+  color: var(--text-header-vendors-color);
+}
+
+// DATA SELL Width
+
+.vendor-pic,
+.btn-edit-data-item,
+.vendor-name,
+.gpu-name {
+  width: 10%;
+}
+
+.retail-name {
+  width: 40%;
+}
+
+.p-number {
+  width: 20%;
+}

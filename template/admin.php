@@ -107,7 +107,7 @@ if (@$route[1] == 'update-gpu-cat') $title = '<span class="material-symbols-outl
         </header>
 
         <main class="admin-main">
-            <div class="main-container">
+            <div class="admin-data-container">
                 <?php
                 switch ($route) {
                     case (@$route[1] == ''):
