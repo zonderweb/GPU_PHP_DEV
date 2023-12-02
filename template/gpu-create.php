@@ -85,4 +85,4 @@ if (isset($_POST['submit'])) {
   );
 }
 
-require_once 'include/_gpu_form.php';
+require_once 'include/_input-gpu-data.php';

@@ -2,13 +2,12 @@
 .form-area {
   background: var(--white-color);
   padding: 30px;
-  border-radius: 1rem;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px -1px rgba(0, 0, 0, .1);
+  // border-radius: 1rem;
+  // box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px -1px rgba(0, 0, 0, .1);
 }
 
 /* FORM CREATE */
 .form-container {
-  max-width: 80%;
   margin: auto;
 
   p {
@@ -79,5 +78,168 @@
     &:hover {
       opacity: .8;
     }
+  }
+}
+
+// DATA FORM NEW
+
+.data-grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr 2fr 2fr;
+  column-gap: 10px;
+}
+
+@media screen and (max-width: 1310px) {
+  .data-grid {
+    grid-template-columns: 2fr 2fr;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .data-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.data-img-upload {
+  margin-top: 20px;
+  padding-right: 10px;
+}
+
+.data-img-core {
+  max-width: 100%;
+}
+
+.description-data-text {
+  font-weight: 500;
+  font-size: .875rem;
+  line-height: 1.5rem;
+  color: var(--text-row-color);
+
+  textarea {
+    width: 100%;
+    min-height: 300px;
+    width: 100%;
+    border: 1px solid var(--inpt-border-color);
+    font-size: .875rem;
+    line-height: 1.5rem;
+    color: rgba(0, 0, 0, .87);
+    padding: 7px 10px;
+    font-family: var(--main-font);
+    font-weight: 400;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+}
+
+.data-item {
+
+  // border: 1px solid #bdbaba;
+  p {
+    font-weight: 500;
+    font-size: .875rem;
+    line-height: 1.5rem;
+    color: var(--text-row-color);
+  }
+
+  input,
+  select {
+    width: 100%;
+    border: 1px solid var(--inpt-border-color);
+    font-size: .875rem;
+    line-height: 1.5rem;
+    color: rgba(0, 0, 0, .87);
+    padding: 7px 10px;
+    font-family: var(--main-font);
+    font-weight: 400;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  input[type="file"] {
+    border: none;
+    outline: none;
+    font-size: .875rem;
+  }
+}
+
+.double-inpt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vendor-p {
+  width: 30%;
+}
+
+.cat-select {
+  width: 65%;
+
+  select {
+    padding: 9px;
+  }
+}
+
+.g-clock,
+.boost-clock,
+.memory-clock,
+.cores,
+.tmus,
+.rops,
+.g-proc,
+.m-size,
+.m-type,
+.bus-w {
+  width: 48%;
+}
+
+.g-clock,
+.boost-clock,
+.memory-clock,
+.cores,
+.tmus,
+.rops,
+.m-size,
+.bus-w {
+  position: relative;
+}
+
+.g-clock,
+.boost-clock,
+.memory-clock,
+.cores,
+.tmus,
+.rops,
+.m-size,
+.bus-w {
+
+  &::after {
+    content: 'MHz';
+    font-size: .875rem;
+    position: absolute;
+    color: var(--inpt-after-color);
+    top: 32px;
+    right: 32px;
+  }
+}
+
+.cores,
+.tmus,
+.rops {
+  &::after {
+    content: 'qt';
+  }
+}
+
+.m-size {
+  &::after {
+    content: 'GB';
+  }
+}
+
+.bus-w {
+  &::after {
+    content: 'bit';
   }
 }

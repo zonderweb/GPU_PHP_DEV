@@ -74,4 +74,4 @@ if (isset($_POST['submit'])) {
     echo $alert;
   }
 }
-require_once 'include/_gpu_form.php';
+require_once 'include/_input-gpu-data.php';
