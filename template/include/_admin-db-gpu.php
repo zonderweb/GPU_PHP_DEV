@@ -5,7 +5,6 @@
     <div class="retail-name">Retail</div>
     <div class="vendor-name">Vendor</div>
     <div class="p-number">Part Num.</div>
-    <div class="gpu-name">GPU</div>
     <div class="btn-edit-data-item">Details</div>
   </div>
 
@@ -17,12 +16,12 @@
     $out .= '<div class="retail-name">' . $resultGpu[$i]['title'] . '</div>';
     $out .= '<div class="vendor-name">' . $resultGpu[$i]['vendor'] . '</div>';
     $out .= '<div class="p-number">' . $resultGpu[$i]['part-num'] . '</div>';
-    $out .= '<div class="gpu-name">' . $resultGpu[$i]['graph-processor'] . '</div>';
-    $out .= '<div class="btn-edit-data-item"><a href="/admin/gpu-update/' . $resultGpu[$i]['id'] . '" >Edit</a></div>';
+    $out .= '<div class="btn-edit-data-item">';
+    $out .= '<a href="/admin/gpu-update/' . $resultGpu[$i]['id'] . '" >Edit</a>';
+    $out .= '<a class="delete-item" title="Видалити матеріал" href="/admin/delete-vendor/' . $resultGpu[$i]['id'] . '" onclick="return confirm(\'Точно видалити?\')">Delete</a>';
+    $out .= '</div>';
     $out .= '</div>';
   }
   echo $out;
   ?>
 </div>
-
-<!-- $out .= '<a class="article-del" title="Видалити матеріал" href="/admin/delete-vendor/' . $resultGpu[$i]['id'] . '" onclick="return confirm(\'Точно видалити?\')"><span class="material-symbols-outlined">delete_forever</span></a>'; -->

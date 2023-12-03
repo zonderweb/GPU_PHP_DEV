@@ -44,6 +44,15 @@
   }
 }
 
+a.delete-item {
+  margin-left: 15%;
+  color: var(--red-color);
+
+  &:hover {
+    color: var(--sub-red-color);
+  }
+}
+
 .p-number {
   font-size: .75rem;
   color: var(--text-header-vendors-color);
@@ -52,10 +61,12 @@
 // DATA SELL Width
 
 .vendor-pic,
-.btn-edit-data-item,
-.vendor-name,
-.gpu-name {
+.vendor-name {
   width: 10%;
+}
+
+.btn-edit-data-item {
+  width: 20%;
 }
 
 .retail-name {

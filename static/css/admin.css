@@ -346,16 +346,26 @@ h6 {
   color: var(--btn-fiolet-color);
 }
 
+a.delete-item {
+  margin-left: 15%;
+  color: var(--red-color);
+}
+a.delete-item:hover {
+  color: var(--sub-red-color);
+}
+
 .p-number {
   font-size: 0.75rem;
   color: var(--text-header-vendors-color);
 }
 
 .vendor-pic,
-.btn-edit-data-item,
-.vendor-name,
-.gpu-name {
+.vendor-name {
   width: 10%;
+}
+
+.btn-edit-data-item {
+  width: 20%;
 }
 
 .retail-name {
@@ -465,6 +475,7 @@ h6 {
 
 .data-img-core {
   max-width: 100%;
+  height: auto;
 }
 
 .description-data-text {
