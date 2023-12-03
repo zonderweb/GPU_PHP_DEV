@@ -755,6 +755,8 @@ h6 {
 .err-title {
   font-weight: 700;
   font-size: 10rem;
+  line-height: 10.625rem;
+  letter-spacing: -2px;
 }
 
 .responsive-img {

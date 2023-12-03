@@ -27,6 +27,7 @@
   --text-header-vendors-color: #64748b;
   --inpt-border-color: #cbd5e1;
   --inpt-after-color: #94a3b8;
+  --link-back-color: #6366f1;
 }
 
 *,
@@ -475,7 +476,6 @@ a.delete-item:hover {
 
 .data-img-core {
   max-width: 100%;
-  height: auto;
 }
 
 .description-data-text {
@@ -613,6 +613,7 @@ a.delete-item:hover {
 .admin-main {
   grid-area: main;
   background: var(--main-area-color);
+  position: relative;
 }
 
 .main-container {
@@ -711,7 +712,6 @@ a.delete-item:hover {
   align-items: center;
   background: var(--white-color);
   margin-bottom: 1.56rem;
-  border-radius: 1rem;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
 }
 
@@ -848,6 +848,43 @@ a.delete-item:hover {
 
 .war-edit {
   background: rgba(21, 101, 192, 0.1);
+}
+
+.data-error {
+  background: var(--white-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.error-code {
+  font-weight: 800;
+  font-size: 3rem;
+  line-height: 3rem;
+  margin-bottom: 15px;
+}
+
+.error-message {
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
+  color: var(--text-header-vendors-color);
+  margin-bottom: 50px;
+}
+
+.link-back {
+  font-size: 0.875rem;
+  line-height: 1.3125rem;
+  font-weight: 500;
+}
+.link-back a {
+  color: var(--link-back-color);
 }
 
 /*# sourceMappingURL=admin.css.map */

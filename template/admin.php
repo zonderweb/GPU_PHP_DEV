@@ -94,13 +94,20 @@ if (@$route[1] == 'update-gpu-cat') $title = '<span class="material-symbols-outl
                 <div class="header-container">
                     <div class="header-info">
                         <h2 class="admin-subtitle">
-                            <?php echo $title; ?>
+                            <?php
+                            if (@$title != NULL) {
+                                echo $title;
+                            }
+                            if (@$title == NULL) {
+                                echo 'Ooops';
+                            }
+                            ?>
                         </h2>
-                        <?php if (@$route[1] == 'db-gpu') {
-                            echo '<div class="btn-create">
-                        <a href="/admin/gpu-create"><span class="material-symbols-outlined">add</span>Створити</a>
-                    </div>';
-                        } ?>
+                        <?php
+                        if (@$route[1] == 'db-gpu') {
+                            echo '<div class="btn-create"><a href="/admin/gpu-create"><span class="material-symbols-outlined">add</span>Створити</a></div>';
+                        }
+                        ?>
                     </div>
                 </div>
             </div>

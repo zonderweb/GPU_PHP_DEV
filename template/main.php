@@ -11,7 +11,7 @@
   </div>
   <div class="article-row">
     <?php
-    $queryTable = "SELECT vendor, url, title, img FROM gpuarticle";
+    $queryTable = "SELECT vendor, url, title, img FROM gpuarticle ORDER BY id DESC";
     $queryVendors = select($queryTable);
 
     $vendorOut = '';
