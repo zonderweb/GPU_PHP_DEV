@@ -249,7 +249,7 @@ h6 {
 }
 
 .header-bottom {
-  padding: 25px 30px;
+  padding: 15px 30px;
 }
 
 .header-top {
@@ -265,17 +265,17 @@ h6 {
 }
 
 .admin-subtitle {
-  font-size: 1.5rem;
-  line-height: 2.375rem;
-  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  font-weight: 500;
   display: flex;
   align-items: center;
-  text-transform: uppercase;
 }
 .admin-subtitle span {
   color: var(--green-icon-color);
   font-weight: 400;
   margin-right: 5px;
+  font-size: 1.25rem;
 }
 
 .header-info {
