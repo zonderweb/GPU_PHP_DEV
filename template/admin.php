@@ -210,6 +210,7 @@ if (@$route[1] == 'update-gpu-cat') $title = '<span class="material-symbols-outl
             </div>
         </main>
     </div>
+    <script src="/static/js/app.js"></script>
 </body>
 
 </html>

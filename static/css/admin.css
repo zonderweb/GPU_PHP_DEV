@@ -584,6 +584,13 @@ h6 {
   content: "bit";
 }
 
+.pic-field {
+  cursor: pointer;
+}
+.pic-field input {
+  display: none;
+}
+
 .admin-area {
   display: grid;
   height: 100vh;

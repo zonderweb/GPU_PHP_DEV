@@ -243,3 +243,11 @@
     content: 'bit';
   }
 }
+
+.pic-field {
+  cursor: pointer;
+
+  input {
+    display: none;
+  }
+}

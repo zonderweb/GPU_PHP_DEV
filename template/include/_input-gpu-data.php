@@ -9,7 +9,12 @@
               echo '<img class="data-img-core" src="/static/images/vendor/' . $result['img'] . '">';
             }
             ?>
-            <p>Upload photo:<br> <input class="upl-img" type="file" name="image"></p>
+            <p>Upload photo:<br>
+              <label class="pic-field">
+                <input type="file" name="image" id="image-gpu">
+                <img src="/static/images/svg/add_photo.svg" id="preview-ico" class="preview-img">
+              </label>
+            </p>
           </div>
         </div>
         <div class="data-item">
