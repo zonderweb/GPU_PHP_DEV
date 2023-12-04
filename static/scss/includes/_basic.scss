@@ -47,6 +47,18 @@ h6 {
   padding: 1.5625rem;
 }
 
+.p-20 {
+  padding: toRem(20);
+}
+
+.p-15 {
+  padding: .9375rem;
+}
+
+.p-25-20 {
+  padding: 1.5625rem 1.25rem;
+}
+
 .bold-600 {
   font-weight: 600;
 }
@@ -73,6 +85,10 @@ h6 {
 
 .display-n {
   display: none;
+}
+
+.bgc-grey {
+  background-color: var(--grey-header-color);
 }
 
 .table-img {

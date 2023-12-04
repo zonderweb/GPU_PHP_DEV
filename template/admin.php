@@ -90,7 +90,7 @@ if (@$route[1] == 'update-gpu-cat') $title = '<span class="material-symbols-outl
                 <h1 class="title title-h1 title-admin"><span class="material-symbols-outlined">admin_panel_settings</span>admin</h1>
                 <a class="logout" href="/logout">Вихід <span class="material-symbols-outlined">logout</span></a>
             </div>
-            <div class="header-bottom" <?php if (@$title == NULL) echo 'style="display:none"' ?>>
+            <div class="header-bottom <?php if ($route[1] == 'create-gpu-cat' or $route[1] == 'gpu-create') echo 'bgc-grey' ?>" <?php if (@$title == NULL) echo 'style="display:none"' ?>>
                 <div class="header-container">
                     <div class="header-info">
                         <h2 class="admin-subtitle">

@@ -79,6 +79,18 @@ h6 {
   padding: 1.5625rem;
 }
 
+.p-20 {
+  padding: 1.25rem;
+}
+
+.p-15 {
+  padding: 0.9375rem;
+}
+
+.p-25-20 {
+  padding: 1.5625rem 1.25rem;
+}
+
 .bold-600 {
   font-weight: 600;
 }
@@ -105,6 +117,10 @@ h6 {
 
 .display-n {
   display: none;
+}
+
+.bgc-grey {
+  background-color: var(--grey-header-color);
 }
 
 .table-img {
@@ -712,6 +728,7 @@ a.delete-item:hover {
   align-items: center;
   background: var(--white-color);
   margin-bottom: 1.56rem;
+  border-radius: 0.25rem;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
 }
 
@@ -791,18 +808,29 @@ a.delete-item:hover {
   line-height: 1.625rem;
 }
 
+.main-gpu-category-box {
+  max-width: 95%;
+  margin: 30px auto auto auto;
+}
+
 .list-category-admin {
   border-collapse: collapse;
   width: 100%;
 }
-.list-category-admin td {
-  font-size: 0.875rem;
-  line-height: 1.5rem;
-}
 .list-category-admin th {
-  background: #97A0A9;
-  color: var(--white-color);
+  background-color: rgb(248, 250, 252);
+  color: #475569;
   text-align: left;
+  font-weight: 600;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  text-transform: uppercase;
+}
+.list-category-admin td {
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #475569;
 }
 .list-category-admin td,
 .list-category-admin th {
@@ -848,6 +876,55 @@ a.delete-item:hover {
 
 .war-edit {
   background: rgba(21, 101, 192, 0.1);
+}
+
+td.table-cat-name {
+  color: #1e293b;
+}
+
+.action-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.action-link a {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.action-link a:hover {
+  color: var(--white-color);
+}
+.action-link a span {
+  font-size: 1rem;
+}
+
+a.view-link {
+  color: rgb(90, 102, 241);
+  background-color: rgba(90, 102, 241, 0.1);
+}
+a.view-link:hover {
+  background-color: rgb(90, 102, 241);
+}
+
+a.update-link {
+  color: rgb(96, 165, 250);
+  background-color: rgba(96, 165, 250, 0.1);
+}
+a.update-link:hover {
+  background-color: rgb(96, 165, 250);
+}
+
+a.delete-link {
+  color: rgb(244, 63, 94);
+  background-color: rgba(244, 63, 94, 0.1);
+}
+a.delete-link:hover {
+  background-color: rgb(244, 63, 94);
 }
 
 .data-error {
