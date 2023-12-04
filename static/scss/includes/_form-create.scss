@@ -251,3 +251,55 @@
     display: none;
   }
 }
+
+// FORM AREA CREATE GPU CATEGORY
+
+.gpu-category-input-area {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gpu-input-area {
+  background-color: var(--white-color);
+  padding: torem(25) torem(20) torem(10) torem(20);
+  width: 49%;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px -1px rgba(0, 0, 0, .1);
+  border-radius: torem(5);
+  font-size: torem(14);
+  line-height: torem(20);
+  font-weight: 500;
+  overflow: hidden;
+
+  input,
+  textarea {
+    border: 1px solid var(--inpt-border-color);
+    padding: torem(7) torem(10);
+    border-radius: torem(5);
+    width: 100%;
+    margin-bottom: torem(15);
+    font-size: torem(14);
+    line-height: torem(24);
+    color: rgba(0, 0, 0, .87);
+    font-family: var(--main-font);
+  }
+
+  textarea {
+    min-height: 215px;
+  }
+}
+
+.duo-inpt {
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    width: 49%;
+  }
+}
+
+.grey-marker {
+  margin-top: torem(-10);
+  color: #64748b;
+  display: block;
+  font-size: torem(12);
+}

@@ -618,6 +618,53 @@ a.delete-item:hover {
   display: none;
 }
 
+.gpu-category-input-area {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gpu-input-area {
+  background-color: var(--white-color);
+  padding: 1.5625rem 1.25rem 0.625rem 1.25rem;
+  width: 49%;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  border-radius: 0.3125rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  overflow: hidden;
+}
+.gpu-input-area input,
+.gpu-input-area textarea {
+  border: 1px solid var(--inpt-border-color);
+  padding: 0.4375rem 0.625rem;
+  border-radius: 0.3125rem;
+  width: 100%;
+  margin-bottom: 0.9375rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  color: rgba(0, 0, 0, 0.87);
+  font-family: var(--main-font);
+}
+.gpu-input-area textarea {
+  min-height: 215px;
+}
+
+.duo-inpt {
+  display: flex;
+  justify-content: space-between;
+}
+.duo-inpt p {
+  width: 49%;
+}
+
+.grey-marker {
+  margin-top: -0.625rem;
+  color: #64748b;
+  display: block;
+  font-size: 0.75rem;
+}
+
 .admin-area {
   display: grid;
   height: 100vh;
