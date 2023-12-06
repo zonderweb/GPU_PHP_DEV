@@ -1,4 +1,4 @@
-<div class="form-area">
+<div class="form-area admin-form-area box-sh">
   <div class="form-container">
     <form action="" method="POST" enctype="multipart/form-data">
       <p>Назва Категорії (Title): <input type="text" name="title" value="<?php if (isset($editCat['title'])) echo $editCat['title']; ?>"></p>

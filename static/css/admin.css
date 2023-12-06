@@ -137,6 +137,10 @@ h6 {
   vertical-align: top;
 }
 
+.box-sh {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
+
 /* LEFT DASBOARD */
 .left-menu {
   margin-bottom: 40px;
@@ -663,6 +667,12 @@ a.delete-item:hover {
   color: #64748b;
   display: block;
   font-size: 0.75rem;
+}
+
+.admin-form-area {
+  max-width: 75%;
+  margin: 30px auto auto auto;
+  border-radius: 0.3125rem;
 }
 
 .admin-area {
