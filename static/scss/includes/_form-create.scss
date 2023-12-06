@@ -309,3 +309,9 @@
   margin: 30px auto auto auto;
   border-radius: torem(5);
 }
+
+@media screen and (max-width: 980px) {
+  .admin-form-area {
+    max-width: 90%;
+  }
+}

@@ -675,6 +675,11 @@ a.delete-item:hover {
   border-radius: 0.3125rem;
 }
 
+@media screen and (max-width: 980px) {
+  .admin-form-area {
+    max-width: 90%;
+  }
+}
 .admin-area {
   display: grid;
   height: 100vh;
